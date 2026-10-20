@@ -17,7 +17,9 @@
     {
       "id": "record-boxes",
       "name": "Record Boxes",
-      "categories": ["record-box"],
+      "categories": [
+        "record-box"
+      ],
       "default": true
     }
   ],
@@ -27,7 +29,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [180, 365],
+        "origin": [
+          180,
+          365
+        ],
         "path": "h60 v185 h-60 z"
       }
     },
@@ -36,7 +41,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [240, 425],
+        "origin": [
+          240,
+          425
+        ],
         "path": "h75 v60 h-35 v65 h-40 z"
       }
     },
@@ -45,10 +53,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [315, 425],
+        "origin": [
+          315,
+          425
+        ],
         "path": "h50 v15 v-15 v-40 h50 v90 h10 v97.5 h-55 v-22.5 h-55 v-125"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M95,119 h-25 M55,90 h40 M55,125 v-7.5 M55,95 v-5 M0,0 h50 v15 h5 v25 M50,0 v-40 h50 v90 h10 v97.5 h-55 v-22.5 h-55 v-125",
@@ -61,7 +74,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [347.5, 465],
+        "origin": [
+          347.5,
+          465
+        ],
         "path": "h22.5 v15 h-22.5 z"
       }
     },
@@ -70,7 +86,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [347.5, 480],
+        "origin": [
+          347.5,
+          480
+        ],
         "path": "h22.5 v35 h-22.5 z"
       },
       "innerLines": [
@@ -85,7 +104,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [110, 595],
+        "origin": [
+          110,
+          595
+        ],
         "path": "h70 v-45 h135 h30 v230 h-35 v-50 h-70 v-90 h50 v65 h-50 v25 v45 h-60 v-52.5 h-70 z"
       },
       "innerLines": [
@@ -100,7 +122,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [110, 722.5],
+        "origin": [
+          110,
+          722.5
+        ],
         "path": "h70 v52.5 h-70 z"
       }
     },
@@ -109,7 +134,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [445, 445],
+        "origin": [
+          445,
+          445
+        ],
         "path": "v-22.5 h48 v55 h52 v72.5 h-120 v-75 h20"
       }
     },
@@ -118,10 +146,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [415, 445],
+        "origin": [
+          415,
+          445
+        ],
         "path": "h30 v30 h-30 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M30,0 h-30 v30 h30 v-1.5",
@@ -130,7 +163,10 @@
       ],
       "label": {
         "text": "dogs",
-        "pos": [15, 15],
+        "pos": [
+          15,
+          15
+        ],
         "fontSize": 10
       }
     },
@@ -139,7 +175,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [345, 550],
+        "origin": [
+          345,
+          550
+        ],
         "path": "h25 v22.5 h40 v25 h15 v-47.5 h20 v47.5 h-7 h7 h7.5 v-25 h-7.5 v-22.55 h48 v53 h-18 v22 h-130 z"
       }
     },
@@ -148,7 +187,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [493, 550],
+        "origin": [
+          493,
+          550
+        ],
         "path": "h52 v70 h-30 v-23 h-22 z"
       }
     },
@@ -157,12 +199,18 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [345, 625],
+        "origin": [
+          345,
+          625
+        ],
         "path": "h170 v105 h-170 z"
       },
       "label": {
         "text": "GYMNASIUM",
-        "pos": [85, 82.5],
+        "pos": [
+          85,
+          82.5
+        ],
         "fontSize": 10
       }
     },
@@ -171,10 +219,16 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [270, 875],
+        "origin": [
+          270,
+          875
+        ],
         "path": "h-25 v-100 h-55 v15 h-20 v45 h20 v25 l1,22 l5,20 l14,15 l15,8 l20,5 h25"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h-25 v-100 h-55 v15 h-20 v45 h20 v25 l1,22 l5,20 l14,15 l15,8 l20,5 h25",
@@ -183,7 +237,10 @@
       ],
       "label": {
         "text": "ramp up",
-        "pos": [-54.5, -8],
+        "pos": [
+          -54.5,
+          -8
+        ],
         "fontSize": 10
       }
     },
@@ -192,7 +249,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [70, 505],
+        "origin": [
+          70,
+          505
+        ],
         "path": "h110 v90 h-110 z"
       }
     },
@@ -201,7 +261,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [320, 975],
+        "origin": [
+          320,
+          975
+        ],
         "path": "h75 v-70 h-20 v-30 h80 v-75 h5 v-70 h-55 v70 h5 v30 h-90 z"
       }
     },
@@ -210,7 +273,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [110, 722.5],
+        "origin": [
+          110,
+          722.5
+        ],
         "path": "h-40 v77.5 h40 z"
       }
     },
@@ -219,7 +285,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [110, 595],
+        "origin": [
+          110,
+          595
+        ],
         "path": "h-40 v127.5 h40 z"
       }
     },
@@ -228,27 +297,41 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [345, 780],
+        "origin": [
+          345,
+          780
+        ],
         "path": "v50 h-25 v-50 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-16",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [375, 875],
+        "origin": [
+          375,
+          875
+        ],
         "path": "h-15 v30 h15 z"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-17",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [455, 875],
+        "origin": [
+          455,
+          875
+        ],
         "path": "v60 h-60 v-30 h-20 v-30 z"
       }
     },
@@ -257,10 +340,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [70, 505],
+        "origin": [
+          70,
+          505
+        ],
         "path": "v-85 h85 v-55 h25 v80 h-65 v60 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-85 h85 v-55 M110,-140 v80 h-65 v60 h-45 v-1",
@@ -273,7 +361,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [275, 295],
+        "origin": [
+          275,
+          295
+        ],
         "path": "h90 v52.5 h-90"
       }
     },
@@ -282,10 +373,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [493, 250],
+        "origin": [
+          493,
+          250
+        ],
         "path": "h52 v45 h35 v35 h85 v55 h-85 v15 h-87 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,97.5 h-1 h1 v-97.5 h52 v45 h35 v35 h85 v55 h-85 v15",
@@ -298,10 +394,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [493, 230],
+        "origin": [
+          493,
+          230
+        ],
         "path": "h-9 v-40 h-126 v75 h27 v-50 h74 v35 h34 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v1 v-1 h-9 v-40 h-126 v75 M-108,35 v-50 h74 v35 h34",
@@ -314,10 +415,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [155, 365],
+        "origin": [
+          155,
+          365
+        ],
         "path": "v-7 l63,-63 v-30 h167 v30 h-125 v70 h-80"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v1 v-1 v-7 l63,-63 v-30 h140 v-1 v1 M230,-100 v30 h-125 v70 h-80 v1",
@@ -330,17 +436,25 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [459, 240],
+        "origin": [
+          459,
+          240
+        ],
         "path": "v-25 h-36.5 v25 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-24",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [422.5, 215],
+        "origin": [
+          422.5,
+          215
+        ],
         "path": "h-37.5 v55 h27.5 v-30 h10 z"
       }
     },
@@ -349,30 +463,45 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [385, 270],
+        "origin": [
+          385,
+          270
+        ],
         "path": "h27.5 v25 h-27.5 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-26",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [545, 267.5],
+        "origin": [
+          545,
+          267.5
+        ],
         "path": "h30 v12.5 h5 v15 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-27",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [615, 280],
+        "origin": [
+          615,
+          280
+        ],
         "path": "v-50 h-50 v-30 h-57 v30 h-15 v20 h52 v17.5 h30 v12.5 h40"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-50 h-50 v-30 h-57 v30 h-15 v1.5 v-1.5 M-122,-30 v-1.5 v1.5 h52 v17.5 h30 v12.5 h40",
@@ -385,7 +514,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [493, 422.5],
+        "origin": [
+          493,
+          422.5
+        ],
         "path": "h-48 v-17.5 h-30 v-57.5 h78"
       }
     },
@@ -394,17 +526,25 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [260, 365],
+        "origin": [
+          260,
+          365
+        ],
         "path": "h-1 h1 v-70 h15 v52.5 h5 v77.5 h-40 v-60"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-30",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [280, 425],
+        "origin": [
+          280,
+          425
+        ],
         "path": "v-77.5 h135 v37.5 h-50 v40 z"
       }
     },
@@ -413,10 +553,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [515, 620],
+        "origin": [
+          515,
+          620
+        ],
         "path": "v50 h185 v-30 h-65 v-20 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v50 h185 M0,0 h30",
@@ -429,7 +574,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [365, 295],
+        "origin": [
+          365,
+          295
+        ],
         "path": "h50 h-2.5 v-55 h2.5 h44 v10 h34 v45 h-26.5 v-2 v4 v-2 M128,0 v52.5 h-128 v-52.5 h1"
       }
     },
@@ -438,7 +586,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [460, 730],
+        "origin": [
+          460,
+          730
+        ],
         "path": "v35 h55 v40 h25 v-85 h-25 v10 z"
       }
     },
@@ -447,7 +598,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [540, 720],
+        "origin": [
+          540,
+          720
+        ],
         "path": "v85 h70 v-85 z"
       }
     },
@@ -456,7 +610,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [515, 720],
+        "origin": [
+          515,
+          720
+        ],
         "path": "v-50 h95 v50 z"
       }
     },
@@ -465,7 +622,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [650, 780],
+        "origin": [
+          650,
+          780
+        ],
         "path": "v-45 h60 v45 z"
       }
     },
@@ -474,10 +634,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [610, 670],
+        "origin": [
+          610,
+          670
+        ],
         "path": "h90 v65 h-50 v70 h-40 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h90 v65 h-50 v70 h-40 z",
@@ -490,10 +655,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [700, 735],
+        "origin": [
+          700,
+          735
+        ],
         "path": "h10 v10 h65 v-65 h-40 v-40 h-35 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-1 v1 h10 v10 h65 v-65 h-40 v-40 h-35 M0,0 v-65 h-1",
@@ -506,7 +676,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [735, 640],
+        "origin": [
+          735,
+          640
+        ],
         "path": "h-50 v-20 h20 v-25 h-70 h-5 h5 v45 h27.5"
       }
     },
@@ -515,10 +688,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [745, 490],
+        "origin": [
+          745,
+          490
+        ],
         "path": "h15 v-55 h-40 v-15 h-30 v15 v55 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h15 v-55 h-40 v-15 h-30 v15 v55 z",
@@ -527,7 +705,10 @@
       ],
       "label": {
         "text": "upper",
-        "pos": [-2, -7.5],
+        "pos": [
+          -2,
+          -7.5
+        ],
         "fontSize": 10
       }
     },
@@ -536,7 +717,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [635, 490],
+        "origin": [
+          635,
+          490
+        ],
         "path": "v-70 h55 v70 z"
       }
     },
@@ -545,7 +729,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [635, 420],
+        "origin": [
+          635,
+          420
+        ],
         "path": "h-25 v35 h25 z"
       }
     },
@@ -554,17 +741,25 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [635, 490],
+        "origin": [
+          635,
+          490
+        ],
         "path": "v-35 h-25 v20 l25,25 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-43",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [665, 420],
+        "origin": [
+          665,
+          420
+        ],
         "path": "h55 v-25 h-30 v-65 h-25 v55 h-1"
       }
     },
@@ -573,10 +768,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [690, 330],
+        "origin": [
+          690,
+          330
+        ],
         "path": "v-80 v-20 h-5 v20 h-45 v-20 h-25 v50 h45 v50 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M-30,-50 h5 M0,0 v-80 v-20 h-5 v20 h-45 v-20 M-65,-100 h-10 v50 h45 v50 h30 v-1",
@@ -589,20 +789,30 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [680, 230],
+        "origin": [
+          680,
+          230
+        ],
         "path": "h5 v20 h-5 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-46",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [640, 230],
+        "origin": [
+          640,
+          230
+        ],
         "path": "h40 v20 h-40 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v20 h40 v-20 h-25",
@@ -615,10 +825,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [625, 220],
+        "origin": [
+          625,
+          220
+        ],
         "path": "h30 v10 h-30 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,10 h-1 h1 v-10 h30 v10 h1 h-1 M20,10 h-10",
@@ -631,10 +846,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [610, 385],
+        "origin": [
+          610,
+          385
+        ],
         "path": "h-30 v125 h25 l20,-20 l-15,-15 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h-30 v40 h-1 h1 M-30,125 h25 l20,-20 l-15,-15 v-90",
@@ -647,10 +867,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [610, 420],
+        "origin": [
+          610,
+          420
+        ],
         "path": "v-35 h55 v35 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h55 v-25 M55,-35 v-1 v1 h-55 v35 h1",
@@ -663,7 +888,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [580, 465],
+        "origin": [
+          580,
+          465
+        ],
         "path": "h-1.5 h1.5 v-25 h-35 v180 h60 v-15 l-25,-25 v-70 h1 h-1"
       }
     },
@@ -672,20 +900,30 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [635, 640],
+        "origin": [
+          635,
+          640
+        ],
         "path": "h-30 v-25 h30 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-52",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [605, 510],
+        "origin": [
+          605,
+          510
+        ],
         "path": "l20,-20 l10,10 v-10 h110 v105 h-110 v20 h-30 v-10 l-25,-25 v-70 h25 l1,-1"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h5.95 v-0.05 l-2.95,-2.95 l-3,3 l20,-20 l10,10 v-10 h110 v105 h-110 v20 h-30 v-10 l-25,-25 v-70 h25 l1,-1",
@@ -698,47 +936,71 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [545, 400],
+        "origin": [
+          545,
+          400
+        ],
         "path": "h35 v40 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-54",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [415, 405],
+        "origin": [
+          415,
+          405
+        ],
         "path": "h30 v40 h-30 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-55",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [493, 422.5],
+        "origin": [
+          493,
+          422.5
+        ],
         "path": "v-22.5 h51.5 v22.5 z"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-56",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [70, 635],
+        "origin": [
+          70,
+          635
+        ],
         "path": "h-50 v100 h25 v-70 h25 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "ug-room-57",
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [735, 640],
+        "origin": [
+          735,
+          640
+        ],
         "path": "h50 v30 h-50 z"
       }
     },
@@ -747,10 +1009,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [610, 330],
+        "origin": [
+          610,
+          330
+        ],
         "path": "h55 v55 h-55 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M50,0 v-1 v1 h5 v55 h-55 v1 v-1",
@@ -759,7 +1026,10 @@
       ],
       "label": {
         "text": "West Stairs",
-        "pos": [15, 26],
+        "pos": [
+          15,
+          26
+        ],
         "fontSize": 7
       }
     },
@@ -768,10 +1038,15 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [580, 280],
+        "origin": [
+          580,
+          280
+        ],
         "path": "h80 v50 h-80 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h80 v50 v0.5 v-0.5 M0,50 h28 v3 h-28 v-53",
@@ -780,7 +1055,10 @@
       ],
       "label": {
         "text": "Electrical Room",
-        "pos": [40, 25],
+        "pos": [
+          40,
+          25
+        ],
         "fontSize": 10
       }
     },
@@ -789,7 +1067,10 @@
       "floor": -1,
       "zone": "standard",
       "shape": {
-        "origin": [322, 985],
+        "origin": [
+          322,
+          985
+        ],
         "path": "h53.5 v90 h-53.5 z"
       }
     },
@@ -798,10 +1079,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [270, 875],
+        "origin": [
+          270,
+          875
+        ],
         "path": "h-25 v-100 h-55 v15 h-20 v45 h20 v25 l1,22 l5,20 l14,15 l15,8 l20,5 h25"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h-25 v-100 h-55 v15 h-20 v45 h20 v25 l1,22 l5,20 l14,15 l15,8 l20,5 h25",
@@ -810,7 +1097,10 @@
       ],
       "label": {
         "text": "ramp down",
-        "pos": [-54.5, -8],
+        "pos": [
+          -54.5,
+          -8
+        ],
         "fontSize": 10
       }
     },
@@ -819,13 +1109,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [460, 940],
+        "origin": [
+          460,
+          940
+        ],
         "path": "v-85 h65 v85 h-65 v-1 M65,-30 h-30 M35,0 v-5 M35,-25 v-5 h1"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Parking Entrance",
-        "pos": [32, -43.5]
+        "pos": [
+          32,
+          -43.5
+        ]
       }
     },
     {
@@ -833,13 +1131,22 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [375, 780],
+        "origin": [
+          375,
+          780
+        ],
         "path": "v35 h155 v5 h35 v-40 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "label": {
         "text": "Jail",
-        "pos": [80, 20],
+        "pos": [
+          80,
+          20
+        ],
         "fontSize": 10
       }
     },
@@ -848,13 +1155,22 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [407.5, 815],
+        "origin": [
+          407.5,
+          815
+        ],
         "path": "h123.5 v5 h35 v-40 h-158.5"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "label": {
         "text": "Jail",
-        "pos": [80.5, -15],
+        "pos": [
+          80.5,
+          -15
+        ],
         "fontSize": 10
       }
     },
@@ -863,10 +1179,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [375, 875],
+        "origin": [
+          375,
+          875
+        ],
         "path": "h45 v-60 h-45 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h45 v-60 h-15 M10,-60 h-15 z",
@@ -879,10 +1201,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [490, 815],
+        "origin": [
+          490,
+          815
+        ],
         "path": "h40 v40 h-40 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v40 h40 v-40 h-15 M5,0 h-5",
@@ -895,30 +1223,46 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [455, 815],
+        "origin": [
+          455,
+          815
+        ],
         "path": "h35 v40 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-04",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [420, 815],
+        "origin": [
+          420,
+          815
+        ],
         "path": "h35 v40 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-05",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [420, 780],
+        "origin": [
+          420,
+          780
+        ],
         "path": "v-50 h-75 v-25 h-110 v25 h25 v30 h115 v20 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M-185,-75 h10 M0,0 h-15 M-13,-35 h15 M-45,0 h10",
@@ -931,10 +1275,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [240, 800],
+        "origin": [
+          240,
+          800
+        ],
         "path": "v-10 h-60 v45 h-30 v-45 h-70 v-60 h180 v70 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-10 h-60 v45 h-30 v-45 h-70 v-60 h180 v70 z",
@@ -947,10 +1297,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [80, 730],
+        "origin": [
+          80,
+          730
+        ],
         "path": "h15 v60 h-15 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M15,0 h-15 v60 h15",
@@ -963,33 +1319,51 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [85, 790],
+        "origin": [
+          85,
+          790
+        ],
         "path": "h65 v50 h-65 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-09",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [420, 780],
+        "origin": [
+          420,
+          780
+        ],
         "path": "h100 v-50 h-100"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-electric-chair-room",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [375, 780],
+        "origin": [
+          375,
+          780
+        ],
         "path": "v-20 h-115 v80 h40 v-10 h55 v45 h20 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Electric Chair Room",
-        "pos": [-59, 15]
+        "pos": [
+          -59,
+          15
+        ]
       }
     },
     {
@@ -997,30 +1371,46 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [420, 745],
+        "origin": [
+          420,
+          745
+        ],
         "path": "h35 v35 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-11",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [455, 730],
+        "origin": [
+          455,
+          730
+        ],
         "path": "h40 v50 h-40 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-12",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [310, 570],
+        "origin": [
+          310,
+          570
+        ],
         "path": "h305 v-55 h-185 v10 h-45 v-10 h-75"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M120,-45 v15 h-2 h4",
@@ -1033,10 +1423,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [515, 570],
+        "origin": [
+          515,
+          570
+        ],
         "path": "h35 v160 h15 v50 h-47.5 v-50 h-2.5 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h5 M30,0 h5 v160 h15 v50 h-15 M7.5,210 h-5 v0 v-50 h-2.5 v-160",
@@ -1049,10 +1445,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [685, 790],
+        "origin": [
+          685,
+          790
+        ],
         "path": "v80 h-65 v-160 h65 v5 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,3 v77 h-65 v-160 h65 v2",
@@ -1065,30 +1467,48 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [615, 435],
+        "origin": [
+          615,
+          435
+        ],
         "path": "v-50 h-35 v-60 h-10 v-30 h-30 v85 h-30 v55"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-16",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [455, 360],
+        "origin": [
+          455,
+          360
+        ],
         "path": "h-75 v-10 h-105 v60 v5 h35 v-5 h115 v5 h65 z"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-17",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [460, 435],
+        "origin": [
+          460,
+          435
+        ],
         "path": "h50 v-55 h-55 v25"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M50,0 v-10 M50,-37 v-18",
@@ -1101,10 +1521,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [615, 435],
+        "origin": [
+          615,
+          435
+        ],
         "path": "h-80 v25 h-20 v55 h100"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M-30,10 v-10 h-55 M-100,80 h45",
@@ -1113,7 +1539,10 @@
       ],
       "label": {
         "text": "Cafeteria",
-        "pos": [-51, 50],
+        "pos": [
+          -51,
+          50
+        ],
         "fontSize": 10
       }
     },
@@ -1122,10 +1551,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [550, 650],
+        "origin": [
+          550,
+          650
+        ],
         "path": "v90 h70 v-30 h20 v-30 h-20 v-30 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v90 h70 v-30 h20 v-30 h-20 v2 v-4",
@@ -1138,20 +1573,31 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [695, 650],
+        "origin": [
+          695,
+          650
+        ],
         "path": "v-55 h-80 v55 h80 v60 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-20",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [695, 650],
+        "origin": [
+          695,
+          650
+        ],
         "path": "h-80 v30 h25 v30 h55 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h-80 M-80,30 h25 v30 h55 v-60",
@@ -1164,13 +1610,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [565, 740],
+        "origin": [
+          565,
+          740
+        ],
         "path": "h42 v10 h13 v10 l7.5,7.5 v60 l-7.5,7.5 h-55 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Security Room",
-        "pos": [30, 54],
+        "pos": [
+          30,
+          54
+        ],
         "fontSize": 10
       }
     },
@@ -1179,10 +1633,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [550, 555],
+        "origin": [
+          550,
+          555
+        ],
         "path": "h145 v40 h-80 v55 h-65"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h145 v7.5 M145,32.5 v7.5 h-80 v55 h-7.5 M15,95 h-15 v-95 h1",
@@ -1195,13 +1655,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [615, 555],
+        "origin": [
+          615,
+          555
+        ],
         "path": "h30 v-35 h-5 h-5 h5 v-60 h-25 v60 h5 h-5 v35"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Kitchen",
-        "pos": [12.5, -55],
+        "pos": [
+          12.5,
+          -55
+        ],
         "fontSize": 5
       }
     },
@@ -1210,10 +1678,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [645, 555],
+        "origin": [
+          645,
+          555
+        ],
         "path": "h90 v-120 h-95 v70 h5 v50"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h90 v-120 h-95 v70 h5 v50",
@@ -1222,7 +1696,10 @@
       ],
       "label": {
         "text": "Dispatch",
-        "pos": [45, -60],
+        "pos": [
+          45,
+          -60
+        ],
         "fontSize": 10
       }
     },
@@ -1231,20 +1708,31 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [700, 325],
+        "origin": [
+          700,
+          325
+        ],
         "path": "v-60 h-55 v-40 h-30 v100 h55"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-23",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [715, 435],
+        "origin": [
+          715,
+          435
+        ],
         "path": "v-70 h-15 v-40 h-30 v60 h-55 v50 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-70 h-15 v-40 M-45,-110 v60 h-55 v50 h100 M-15,-70 h-8 v-2 v4 v-2 M-45,-70 h8 v-2 v4 M-45,-110 h8 v-2 v4",
@@ -1257,10 +1745,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [715, 435],
+        "origin": [
+          715,
+          435
+        ],
         "path": "v-70 h-15 h-30 v20 h-55 v50 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-70 h-15 v-40 M-45,-110 v60 h-55 v50 h100 M-15,-70 h-8 v-2 v4 v-2 M-45,-70 h8 v-2 v4 M-45,-110 h8 v-2 v4",
@@ -1273,20 +1767,31 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [700, 325],
+        "origin": [
+          700,
+          325
+        ],
         "path": "h35 v40 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-administration",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [570, 225],
+        "origin": [
+          570,
+          225
+        ],
         "path": "h45 v100 h-45 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h45 v100 h-45 z M0,32.5 h14.5 v-2 v4 M0,67.5 h14.5 v-2 v4 M45,67.5 h-14.5 v-2 v4",
@@ -1295,7 +1800,10 @@
       ],
       "label": {
         "text": "Administration",
-        "pos": [22, 50],
+        "pos": [
+          22,
+          50
+        ],
         "fontSize": 5
       }
     },
@@ -1304,10 +1812,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [570, 225],
+        "origin": [
+          570,
+          225
+        ],
         "path": "v-20 h-50 v20 h-30 v70 h80"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-20 h-50 v20 h-30 v70 h50 M0,70 v-70 M0,70 v1 M-30,70 h5",
@@ -1320,10 +1834,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [455, 225],
+        "origin": [
+          455,
+          225
+        ],
         "path": "h-110 v125 h35 v10 h75 v-5 M0,95 v-95"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h-110 v125 h35 v10 h-2 h4 M-40,135 v-2 v4 v-2 h40 v-5 h22.5 v-35 h-22.5 v-95",
@@ -1336,23 +1856,37 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [455, 355],
+        "origin": [
+          455,
+          355
+        ],
         "path": "h22.5 v-35 h-22.5 z"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "f1-reception",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [455, 225],
+        "origin": [
+          455,
+          225
+        ],
         "path": "h35 v70 h-35 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Reception",
-        "pos": [17, 35.5],
+        "pos": [
+          17,
+          35.5
+        ],
         "fontSize": 6
       }
     },
@@ -1361,10 +1895,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [455, 295],
+        "origin": [
+          455,
+          295
+        ],
         "path": "v25 h22.5 v17.5 h40 v-20 h22.5 v-22.5 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v25 h6.25 M16.25,25 h6.25 v17.5 h40 v-20 h22.5 v-22.5 h-85 v1",
@@ -1377,10 +1917,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [477.5, 337.5],
+        "origin": [
+          477.5,
+          337.5
+        ],
         "path": "v17.5 h-22.5 v25 h85 v-22.5 h-22.5 v-20 h-22.5 v-5 h-17.5 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v17.5 h-6.25 M-16.25,17.5 h-6.25 v25 h85 v-22.5 h-22.5 v-20 h-22.5 v-5 h-17.5 v5",
@@ -1393,30 +1939,46 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [517.5, 317.5],
+        "origin": [
+          517.5,
+          317.5
+        ],
         "path": "h22.5 v20 h-22.5 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-32",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [517.5, 337.5],
+        "origin": [
+          517.5,
+          337.5
+        ],
         "path": "h22.5 v20 h-22.5 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-33",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [345, 570],
+        "origin": [
+          345,
+          570
+        ],
         "path": "h-35 v135 h35 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v70",
@@ -1429,10 +1991,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [345, 410],
+        "origin": [
+          345,
+          410
+        ],
         "path": "h-35 v105 h35 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-1.5 v1.5 M-35,0 v5 v-5 h8",
@@ -1445,10 +2013,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [275, 290],
+        "origin": [
+          275,
+          290
+        ],
         "path": "h-35 v65 h-55 v105 h25 v-55 h65"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v115 M-65,170 h-30",
@@ -1461,23 +2035,37 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [230, 290],
+        "origin": [
+          230,
+          290
+        ],
         "path": "h10 v65 h-10 z"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "f1-interrogation-room-1",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [115, 290],
+        "origin": [
+          115,
+          290
+        ],
         "path": "h57.5 v65 h-57.5 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Interrogation Room 1",
-        "pos": [28.5, 32],
+        "pos": [
+          28.5,
+          32
+        ],
         "fontSize": 6
       }
     },
@@ -1486,30 +2074,46 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [115, 355],
+        "origin": [
+          115,
+          355
+        ],
         "path": "h70 v110 h-70 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-38",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [115, 465],
+        "origin": [
+          115,
+          465
+        ],
         "path": "h50 v105 h-50 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-39",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [165, 530],
+        "origin": [
+          165,
+          530
+        ],
         "path": "v40 h55 v-40 h-55"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v40 h55 v-40 h-10 M25,0 h-25",
@@ -1522,10 +2126,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [165, 465],
+        "origin": [
+          165,
+          465
+        ],
         "path": "h20 v-5 h25 v10 h10 v60 h-55"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h20 v-5 v-1 v1 h25 v10 h10 v60 h-10 M25,65 h-25 v-65",
@@ -1538,20 +2148,31 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [145, 570],
+        "origin": [
+          145,
+          570
+        ],
         "path": "h100 v125 h-100 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-42",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [145, 695],
+        "origin": [
+          145,
+          695
+        ],
         "path": "h90 v35 h-90 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h90 v15 M90,30 v5 h-90 v-35",
@@ -1564,10 +2185,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [255, 525],
+        "origin": [
+          255,
+          525
+        ],
         "path": "v45 h55 v-60 h-35 v15"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,45 h55 v-60 h-35 v15",
@@ -1576,7 +2203,10 @@
       ],
       "label": {
         "text": "Evidence Processing",
-        "pos": [27, 20.5]
+        "pos": [
+          27,
+          20.5
+        ]
       }
     },
     {
@@ -1584,10 +2214,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [220, 525],
+        "origin": [
+          220,
+          525
+        ],
         "path": "h35 v45 h-35 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h35 v15 M35,30 v15 h-35 v-45",
@@ -1600,13 +2236,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [245, 570],
+        "origin": [
+          245,
+          570
+        ],
         "path": "h65 v135 h-65 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Laboratory",
-        "pos": [31, 59]
+        "pos": [
+          31,
+          59
+        ]
       }
     },
     {
@@ -1614,13 +2258,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [275, 655],
+        "origin": [
+          275,
+          655
+        ],
         "path": "h35 v50 h-35 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Darkroom",
-        "pos": [17.5, 26.5],
+        "pos": [
+          17.5,
+          26.5
+        ],
         "fontSize": 7
       }
     },
@@ -1629,53 +2281,81 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [220, 460],
+        "origin": [
+          220,
+          460
+        ],
         "path": "h25 v25 h15 v4 v-4 h15 v20 h-15 v-4 v4 v20 h-40 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-45",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [245, 460],
+        "origin": [
+          245,
+          460
+        ],
         "path": "h30 v25 h-30 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-46",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [210, 460],
+        "origin": [
+          210,
+          460
+        ],
         "path": "h10 v10 h-10 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-47",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [260, 525],
+        "origin": [
+          260,
+          525
+        ],
         "path": "h15 v-20 h-15 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-west-stairs",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [580, 325],
+        "origin": [
+          580,
+          325
+        ],
         "path": "h90 v60 h-90 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "West Stairs",
-        "pos": [45, 30],
+        "pos": [
+          45,
+          30
+        ],
         "fontSize": 10
       }
     },
@@ -1684,43 +2364,66 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [615, 435],
+        "origin": [
+          615,
+          435
+        ],
         "path": "h25 v25 h-25 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-49",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [515, 435],
+        "origin": [
+          515,
+          435
+        ],
         "path": "h20 v25 h-20 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-50",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [460, 435],
+        "origin": [
+          460,
+          435
+        ],
         "path": "v-30 h-70 v5 h-10 v30 h50 v75 h30 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-cafeteria-2",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [460, 435],
+        "origin": [
+          460,
+          435
+        ],
         "path": "h55 v80 h-55 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Cafeteria",
-        "pos": [28, 43]
+        "pos": [
+          28,
+          43
+        ]
       }
     },
     {
@@ -1728,10 +2431,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [345, 410],
+        "origin": [
+          345,
+          410
+        ],
         "path": "h35 v30 h50 v85 h-45 v-10 h-40"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h35 v30 h-5 h55 v85 h-45 v-10 v-55 h-2 h4 M40,105 h-40 v-105 h1 M85,57.5 h-20 v-12.5 h-2 h4",
@@ -1740,7 +2449,10 @@
       ],
       "label": {
         "text": "Infirmary",
-        "pos": [40, 45]
+        "pos": [
+          40,
+          45
+        ]
       }
     },
     {
@@ -1748,13 +2460,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [275, 415],
+        "origin": [
+          275,
+          415
+        ],
         "path": "h35 v95 h-35 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Criminal Records",
-        "pos": [18, 48],
+        "pos": [
+          18,
+          48
+        ],
         "fontSize": 6
       }
     },
@@ -1763,10 +2483,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [210, 405],
+        "origin": [
+          210,
+          405
+        ],
         "path": "h65 v55 h-65 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h20 h25 h20 v55 h-65 v-55 h1",
@@ -1779,10 +2505,15 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [275, 290],
+        "origin": [
+          275,
+          290
+        ],
         "path": "h70 v60 h-70 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h70 v60 h-50 M5,60 h-5 v-60 h1",
@@ -1791,7 +2522,10 @@
       ],
       "label": {
         "text": "up",
-        "pos": [42, 8.5],
+        "pos": [
+          42,
+          8.5
+        ],
         "fontSize": 5
       }
     },
@@ -1800,10 +2534,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [345, 620],
+        "origin": [
+          345,
+          620
+        ],
         "path": "h170 v-15 h-50 v-25 h-15 v15 h-45 v-15 h-15 v25 h-45 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v1 v-1 v-15 M170,0 v1 v-1 v-15",
@@ -1816,10 +2556,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [390, 580],
+        "origin": [
+          390,
+          580
+        ],
         "path": "h-45 v30 h15 v-5 h30 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M-45,0 v-1 v1 v30 v1 v-1",
@@ -1832,10 +2578,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [465, 580],
+        "origin": [
+          465,
+          580
+        ],
         "path": "h50 v30 h-15 v-5 h-35 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M50,0 v-1 v1 v30 v1 v-1",
@@ -1848,10 +2600,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [450, 570],
+        "origin": [
+          450,
+          570
+        ],
         "path": "h65 v25 h-50 v-5 h-15 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h65 v25 h-50 v-10 M0,20 v-20 h1",
@@ -1864,30 +2622,46 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [417.5, 570],
+        "origin": [
+          417.5,
+          570
+        ],
         "path": "h-12.5 v25 h45 v-25 h-12.5"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-57",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [405, 585],
+        "origin": [
+          405,
+          585
+        ],
         "path": "v-15 h-60 v25 h45 v-10"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-58",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [520, 205],
+        "origin": [
+          520,
+          205
+        ],
         "path": "v-35 h-240 l-60,35 v55 h-35 v30 h35 h125 v-65 h175 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-35 h-240 l-60,35 v55 h-35 v30 h35 h125 v-65 h175 z",
@@ -1900,10 +2674,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [685, 790],
+        "origin": [
+          685,
+          790
+        ],
         "path": "v5 h45 v-200 h5 v-40 h-40 v155 h-10 v5 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,3 v2 h45 v-200 h5 v-40 h-40 v7.5 M10,-202.5 v7.5 v115 h-10 v2 M0,-38 v5",
@@ -1916,10 +2696,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [685, 710],
+        "origin": [
+          685,
+          710
+        ],
         "path": "h10 v-155 h40 v40 h-5 v115"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h10 v-115 v-10 M10,-145 v-10 h40 v40 h-5 v115 h-35",
@@ -1932,50 +2718,76 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [730, 795],
+        "origin": [
+          730,
+          795
+        ],
         "path": "h60 v-55 h-25 v-50 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-62",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [730, 605],
+        "origin": [
+          730,
+          605
+        ],
         "path": "h60 v25 h-25 v40 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-63",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [730, 670],
+        "origin": [
+          730,
+          670
+        ],
         "path": "h35 v20 h-35 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-64",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [765, 630],
+        "origin": [
+          765,
+          630
+        ],
         "path": "h25 v25 h-25 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-65",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [765, 655],
+        "origin": [
+          765,
+          655
+        ],
         "path": "h25 v35 h-25 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h25 v35 M0,35 v-35",
@@ -1988,10 +2800,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [765, 690],
+        "origin": [
+          765,
+          690
+        ],
         "path": "h25 v25 h-25 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v25 h25 v-25",
@@ -2004,40 +2822,61 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [765, 715],
+        "origin": [
+          765,
+          715
+        ],
         "path": "h25 v25 h-25 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-68",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [742.5, 795],
+        "origin": [
+          742.5,
+          795
+        ],
         "path": "h40 v40 h-40 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-69",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [787.5, 875],
+        "origin": [
+          787.5,
+          875
+        ],
         "path": "l60,60 v85 h-5 v85 h-77.5 v-85 h-155 v-15 h-85 v-140 h95 v5 h65 v-30 h57.5 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-70",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [680, 965],
+        "origin": [
+          680,
+          965
+        ],
         "path": "h65 v55 h-65 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M20,0 h-20 v55 h65 v-55 h-10",
@@ -2050,20 +2889,31 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [597.5, 990],
+        "origin": [
+          597.5,
+          990
+        ],
         "path": "h12.5 v15 h-12.5 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-72",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [610, 965],
+        "origin": [
+          610,
+          965
+        ],
         "path": "v-15 h22.5 v15 h25 v-15 h22.5 v70 h-70 v-15 h-5 v-15 h5 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-15 h22.5 v15 h25 v-15 h22.5 v70 h-70 v-15 h-5 v-15 h5 z",
@@ -2076,10 +2926,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [772.5, 830],
+        "origin": [
+          772.5,
+          830
+        ],
         "path": "h10 v45 h-10 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v45 M10,0 v45",
@@ -2092,13 +2948,22 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [747.5, 830],
+        "origin": [
+          747.5,
+          830
+        ],
         "path": "h25 v45 h-25 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "label": {
         "text": "trailer",
-        "pos": [12, 25],
+        "pos": [
+          12,
+          25
+        ],
         "fontSize": 10
       }
     },
@@ -2107,40 +2972,62 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [685, 795],
+        "origin": [
+          685,
+          795
+        ],
         "path": "h57.5 v55 h-57.5 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-75",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [742.5, 830],
+        "origin": [
+          742.5,
+          830
+        ],
         "path": "h5 v20 h-5 z"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-76",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [822.642, 910.142],
+        "origin": [
+          822.642,
+          910.142
+        ],
         "path": "l1,1 l-1,-1 l3.5,-3.5 l-21,-21 l-21,21 l21,21 l8,-8"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-77",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [530, 870],
+        "origin": [
+          530,
+          870
+        ],
         "path": "h5 v-50 h30 v15 h55 v35"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h5 h85 v-35 h-55 v-15 h-5 M10,-50 h-5",
@@ -2153,10 +3040,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [530, 820],
+        "origin": [
+          530,
+          820
+        ],
         "path": "h5 v50 h-5 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M5,0 h-5 v50 h5",
@@ -2169,10 +3062,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [270, 875],
+        "origin": [
+          270,
+          875
+        ],
         "path": "h-30 v-75 h20 v40 h40 v35 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h-30 v-75 h20 v40 h40 v35",
@@ -2185,10 +3084,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [300, 875],
+        "origin": [
+          300,
+          875
+        ],
         "path": "h160 v55 h-190 v-55"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h-5 h5 h160 v55 h-190 M-30,-2 v4 M-30,53 v4",
@@ -2201,43 +3106,66 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [420, 875],
+        "origin": [
+          420,
+          875
+        ],
         "path": "h40 v-20 h-40 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-82",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [355, 875],
+        "origin": [
+          355,
+          875
+        ],
         "path": "v-45 h-55 v45 z"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-room-83",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [270, 930],
+        "origin": [
+          270,
+          930
+        ],
         "path": "v22.5 h5 v32.5 h15 v15 h15 v-15 h15 v-32.5 h10 v-22.5 h-20"
       },
-      "flags": ["disabled"]
+      "flags": [
+        "disabled"
+      ]
     },
     {
       "id": "f1-evidences",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [115, 570],
+        "origin": [
+          115,
+          570
+        ],
         "path": "h30 v123.5 h-30 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Evidences",
-        "pos": [78, 63]
+        "pos": [
+          78,
+          63
+        ]
       }
     },
     {
@@ -2245,10 +3173,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [780, 85],
+        "origin": [
+          780,
+          85
+        ],
         "path": "h65 v210 h-85 v-210 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h65 v210",
@@ -2261,10 +3195,15 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [790, 680],
+        "origin": [
+          790,
+          680
+        ],
         "path": "h50 v-75 h-50 z"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h50 v-75 M0,-75 v75 h1",
@@ -2277,10 +3216,15 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [790, 605],
+        "origin": [
+          790,
+          605
+        ],
         "path": "h-55 v-170 h-25 v-70 h25 v-10 h20 v10 h10 v-45 h25 v-25 h55 v25 h-5 v50 h37.5 v12.5 h12.5 v50 h-12.5 v12.5 h-37.5 v160"
       },
-      "flags": ["noWalls"],
+      "flags": [
+        "noWalls"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v1 v-1 h-55 v-170 h-25 v-70 h25 v-10 h20 v10 h10 v-45 h25 v-25 M55,-310 v25 h-5 v50 h37.5 v12.5 h12.5 v50 h-12.5 v12.5 h-37.5 v160",
@@ -2293,10 +3237,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [570, 170],
+        "origin": [
+          570,
+          170
+        ],
         "path": "h80 v10 h65 v7.5 h25 h50 v132.5 h-35 v35 h-20 v-130 h-15 v-5 l-15,-15 h-30 l-15,15 v5 h-90 v-20 h-50 v-35 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M165,185 v-130 h-15 v-5 l-15,-15 h-30 l-15,15 v5 h-90 v-20 h-50 v-35",
@@ -2309,10 +3259,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [615, 170],
+        "origin": [
+          615,
+          170
+        ],
         "path": "v-85 h30 v-50 h12.5 v-15 h15 v15 h12.5 v50 h95 v77.5 h-10 v10 h5 v15 h-60 v-7.5 h-65 v-10 h-35"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,-85 h30 v-50 h12.5 v-15 h15 v15 h12.5 v50 h95",
@@ -2325,13 +3281,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [645, 225],
+        "origin": [
+          645,
+          225
+        ],
         "path": "h15 v-5 l15,-15 h30 l15,15 v5 h15 v40 h-90 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Chief Office",
-        "pos": [45, 18]
+        "pos": [
+          45,
+          18
+        ]
       }
     },
     {
@@ -2339,13 +3303,21 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [700, 265],
+        "origin": [
+          700,
+          265
+        ],
         "path": "h35 v60 h-35 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Samuel Room",
-        "pos": [17, 47.5],
+        "pos": [
+          17,
+          47.5
+        ],
         "fontSize": 6
       }
     },
@@ -2354,10 +3326,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [220, 205],
+        "origin": [
+          220,
+          205
+        ],
         "path": "l-30,-35 v-85 h77.5 l12.5,85 z"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M-30,-120 h77.5",
@@ -2370,10 +3348,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [267.5, 85],
+        "origin": [
+          267.5,
+          85
+        ],
         "path": "h347.5 v85 h-350"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 h347.5",
@@ -2386,10 +3370,16 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [267.5, 170],
+        "origin": [
+          267.5,
+          170
+        ],
         "path": "v-85 h-20 v-32.5 h-12.5 v-12.5 h-15 v12.5 h-12.5 v70 l29.5,17.5 l-2.5,4"
       },
-      "flags": ["noWalls", "disabled"],
+      "flags": [
+        "noWalls",
+        "disabled"
+      ],
       "innerLines": [
         {
           "path": "M0,0 v-85 h-20 v-32.5 h-12.5 v-12.5 h-15 v12.5 h-12.5 v32.5 h-1",
@@ -2402,23 +3392,37 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [280, 170],
+        "origin": [
+          280,
+          170
+        ],
         "path": "l-12.5,21.651 l-54.127,-31.25 l12.5,-21.651 l8.66,5 M0,0 l-12.99,-7.5"
       },
-      "flags": ["noWalls", "disabled"]
+      "flags": [
+        "noWalls",
+        "disabled"
+      ]
     },
     {
       "id": "f1-interrogation-room-2",
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [172.5, 290],
+        "origin": [
+          172.5,
+          290
+        ],
         "path": "h57.5 v65 h-57.5 z"
       },
-      "flags": ["disabled"],
+      "flags": [
+        "disabled"
+      ],
       "label": {
         "text": "Interrogation Room 2",
-        "pos": [28.5, 52],
+        "pos": [
+          28.5,
+          52
+        ],
         "fontSize": 6
       }
     },
@@ -2427,7 +3431,10 @@
       "floor": 0,
       "zone": "standard",
       "shape": {
-        "origin": [900, 434.5],
+        "origin": [
+          900,
+          434.5
+        ],
         "path": "v-53.5 h90 v53.5 z"
       }
     }
@@ -2437,341 +3444,551 @@
       "id": "ug-door-01",
       "element": "door",
       "floor": -1,
-      "pos": [260, 550],
-      "size": [20, 4]
+      "pos": [
+        260,
+        550
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-double-door-01",
       "element": "double-door",
       "floor": -1,
-      "pos": [213, 775],
-      "size": [40, 4],
+      "pos": [
+        213,
+        775
+      ],
+      "size": [
+        40,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-door-02",
       "element": "door",
       "floor": -1,
-      "pos": [400, 625],
-      "size": [20, 4]
+      "pos": [
+        400,
+        625
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-03",
       "element": "door",
       "floor": -1,
-      "pos": [345, 705],
+      "pos": [
+        345,
+        705
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-04",
       "element": "door",
       "floor": -1,
-      "pos": [515, 650],
+      "pos": [
+        515,
+        650
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-05",
       "element": "door",
       "floor": -1,
-      "pos": [332.5, 780],
-      "size": [20, 4],
+      "pos": [
+        332.5,
+        780
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-door-06",
       "element": "door",
       "floor": -1,
-      "pos": [335, 347.5],
-      "size": [20, 4]
+      "pos": [
+        335,
+        347.5
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-07",
       "element": "door",
       "floor": -1,
-      "pos": [330, 295]
+      "pos": [
+        330,
+        295
+      ]
     },
     {
       "id": "ug-door-08",
       "element": "door",
       "floor": -1,
-      "pos": [365, 320],
+      "pos": [
+        365,
+        320
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-09",
       "element": "door",
       "floor": -1,
-      "pos": [385, 257.5],
+      "pos": [
+        385,
+        257.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-10",
       "element": "door",
       "floor": -1,
-      "pos": [405, 215]
+      "pos": [
+        405,
+        215
+      ]
     },
     {
       "id": "ug-door-11",
       "element": "door",
       "floor": -1,
-      "pos": [437.5, 347.5]
+      "pos": [
+        437.5,
+        347.5
+      ]
     },
     {
       "id": "ug-door-12",
       "element": "door",
       "floor": -1,
-      "pos": [493, 270],
+      "pos": [
+        493,
+        270
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-13",
       "element": "door",
       "floor": -1,
-      "pos": [518, 250],
-      "size": [20, 4]
+      "pos": [
+        518,
+        250
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-14",
       "element": "door",
       "floor": -1,
-      "pos": [597.5, 280]
+      "pos": [
+        597.5,
+        280
+      ]
     },
     {
       "id": "ug-door-15",
       "element": "door",
       "floor": -1,
-      "pos": [580, 320],
+      "pos": [
+        580,
+        320
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-16",
       "element": "door",
       "floor": -1,
-      "pos": [660, 315],
+      "pos": [
+        660,
+        315
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-17",
       "element": "door",
       "floor": -1,
-      "pos": [677.5, 330],
-      "size": [20, 4]
+      "pos": [
+        677.5,
+        330
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-18",
       "element": "door",
       "floor": -1,
-      "pos": [662.5, 250]
+      "pos": [
+        662.5,
+        250
+      ]
     },
     {
       "id": "ug-door-19",
       "element": "door",
       "floor": -1,
-      "pos": [652.5, 420]
+      "pos": [
+        652.5,
+        420
+      ]
     },
     {
       "id": "ug-door-20",
       "element": "door",
       "floor": -1,
-      "pos": [635, 430],
+      "pos": [
+        635,
+        430
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-21",
       "element": "door",
       "floor": -1,
-      "pos": [610, 435],
+      "pos": [
+        610,
+        435
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-22",
       "element": "door",
       "floor": -1,
-      "pos": [690, 462.5],
+      "pos": [
+        690,
+        462.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-23",
       "element": "door",
       "floor": -1,
-      "pos": [710, 490]
+      "pos": [
+        710,
+        490
+      ]
     },
     {
       "id": "ug-door-24",
       "element": "door",
       "floor": -1,
-      "pos": [650, 770],
+      "pos": [
+        650,
+        770
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-25",
       "element": "door",
       "floor": -1,
-      "pos": [300, 280],
+      "pos": [
+        300,
+        280
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-26",
       "element": "door",
       "floor": -1,
-      "pos": [432.5, 730],
-      "size": [30, 4]
+      "pos": [
+        432.5,
+        730
+      ],
+      "size": [
+        30,
+        4
+      ]
     },
     {
       "id": "ug-window-01",
       "element": "window",
       "floor": -1,
-      "pos": [402, 544]
+      "pos": [
+        402,
+        544
+      ]
     },
     {
       "id": "ug-window-02",
       "element": "window",
       "floor": -1,
-      "pos": [130, 595]
+      "pos": [
+        130,
+        595
+      ]
     },
     {
       "id": "ug-window-03",
       "element": "window",
       "floor": -1,
-      "pos": [635, 510.5],
+      "pos": [
+        635,
+        510.5
+      ],
       "rotation": 90,
-      "size": [8.5, 4],
+      "size": [
+        8.5,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-window-04",
       "element": "window",
       "floor": -1,
-      "pos": [635, 529.5],
+      "pos": [
+        635,
+        529.5
+      ],
       "rotation": 90,
-      "size": [8.5, 4],
+      "size": [
+        8.5,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-window-05",
       "element": "window",
       "floor": -1,
-      "pos": [635, 538],
+      "pos": [
+        635,
+        538
+      ],
       "rotation": 90,
-      "size": [8.5, 4],
+      "size": [
+        8.5,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-window-06",
       "element": "window",
       "floor": -1,
-      "pos": [635, 546.5],
+      "pos": [
+        635,
+        546.5
+      ],
       "rotation": 90,
-      "size": [8.5, 4]
+      "size": [
+        8.5,
+        4
+      ]
     },
     {
       "id": "ug-window-07",
       "element": "window",
       "floor": -1,
-      "pos": [635, 555],
+      "pos": [
+        635,
+        555
+      ],
       "rotation": 90,
-      "size": [8.5, 4]
+      "size": [
+        8.5,
+        4
+      ]
     },
     {
       "id": "ug-window-08",
       "element": "window",
       "floor": -1,
-      "pos": [635, 563.5],
+      "pos": [
+        635,
+        563.5
+      ],
       "rotation": 90,
-      "size": [8.5, 4],
+      "size": [
+        8.5,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-window-09",
       "element": "window",
       "floor": -1,
-      "pos": [635, 572],
+      "pos": [
+        635,
+        572
+      ],
       "rotation": 90,
-      "size": [8.5, 4],
+      "size": [
+        8.5,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-window-10",
       "element": "window",
       "floor": -1,
-      "pos": [635, 580.5],
+      "pos": [
+        635,
+        580.5
+      ],
       "rotation": 90,
-      "size": [8.5, 4],
+      "size": [
+        8.5,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "ug-window-11",
       "element": "window",
       "floor": -1,
-      "pos": [700, 702.5],
+      "pos": [
+        700,
+        702.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-window-12",
       "element": "window",
       "floor": -1,
-      "pos": [580, 447],
+      "pos": [
+        580,
+        447
+      ],
       "rotation": 90
     },
     {
       "id": "ug-window-13",
       "element": "window",
       "floor": -1,
-      "pos": [480, 295],
-      "size": [12, 4]
+      "pos": [
+        480,
+        295
+      ],
+      "size": [
+        12,
+        4
+      ]
     },
     {
       "id": "ug-vault-window-01",
       "element": "vault-window",
       "floor": -1,
-      "pos": [120, 722.5]
+      "pos": [
+        120,
+        722.5
+      ]
     },
     {
       "id": "ug-vault-window-02",
       "element": "vault-window",
       "floor": -1,
-      "pos": [395, 920],
+      "pos": [
+        395,
+        920
+      ],
       "rotation": 90
     },
     {
       "id": "ug-vault-window-03",
       "element": "vault-window",
       "floor": -1,
-      "pos": [412.5, 265],
+      "pos": [
+        412.5,
+        265
+      ],
       "rotation": 90
     },
     {
       "id": "ug-vault-window-04",
       "element": "vault-window",
       "floor": -1,
-      "pos": [615, 237.5],
+      "pos": [
+        615,
+        237.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-27",
       "element": "door",
       "floor": -1,
-      "pos": [110, 615],
+      "pos": [
+        110,
+        615
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-28",
       "element": "door",
       "floor": -1,
-      "pos": [110, 702.5],
+      "pos": [
+        110,
+        702.5
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-29",
       "element": "door",
       "floor": -1,
-      "pos": [70, 650],
+      "pos": [
+        70,
+        650
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -2779,186 +3996,285 @@
       "id": "ug-door-30",
       "element": "door",
       "floor": -1,
-      "pos": [110, 757.5],
+      "pos": [
+        110,
+        757.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-31",
       "element": "door",
       "floor": -1,
-      "pos": [90, 722.5]
+      "pos": [
+        90,
+        722.5
+      ]
     },
     {
       "id": "ug-door-32",
       "element": "door",
       "floor": -1,
-      "pos": [180, 380],
+      "pos": [
+        180,
+        380
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-33",
       "element": "door",
       "floor": -1,
-      "pos": [180, 525],
+      "pos": [
+        180,
+        525
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-yellow-01",
       "element": "door-yellow",
       "floor": -1,
-      "pos": [180, 575],
+      "pos": [
+        180,
+        575
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-34",
       "element": "door",
       "floor": -1,
-      "pos": [90, 595]
+      "pos": [
+        90,
+        595
+      ]
     },
     {
       "id": "ug-door-35",
       "element": "door",
       "floor": -1,
-      "pos": [390, 875]
+      "pos": [
+        390,
+        875
+      ]
     },
     {
       "id": "ug-door-36",
       "element": "door",
       "floor": -1,
-      "pos": [447.5, 875]
+      "pos": [
+        447.5,
+        875
+      ]
     },
     {
       "id": "ug-door-37",
       "element": "door",
       "floor": -1,
-      "pos": [475, 422.5]
+      "pos": [
+        475,
+        422.5
+      ]
     },
     {
       "id": "ug-door-38",
       "element": "door",
       "floor": -1,
-      "pos": [240, 455],
+      "pos": [
+        240,
+        455
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-39",
       "element": "door",
       "floor": -1,
-      "pos": [315, 472],
+      "pos": [
+        315,
+        472
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-40",
       "element": "door",
       "floor": -1,
-      "pos": [347.5, 472.5],
+      "pos": [
+        347.5,
+        472.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-41",
       "element": "door",
       "floor": -1,
-      "pos": [347.5, 487.5],
+      "pos": [
+        347.5,
+        487.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-42",
       "element": "door",
       "floor": -1,
-      "pos": [347.5, 502.5],
+      "pos": [
+        347.5,
+        502.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-43",
       "element": "door",
       "floor": -1,
-      "pos": [425, 490],
+      "pos": [
+        425,
+        490
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-44",
       "element": "door",
       "floor": -1,
-      "pos": [370, 452.5],
+      "pos": [
+        370,
+        452.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-45",
       "element": "door",
       "floor": -1,
-      "pos": [392.5, 385],
-      "size": [20, 4]
+      "pos": [
+        392.5,
+        385
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-obstacle-01",
       "element": "obstacle",
       "floor": -1,
-      "pos": [297.5, 420]
+      "pos": [
+        297.5,
+        420
+      ]
     },
     {
       "id": "ug-door-46",
       "element": "door",
       "floor": -1,
-      "pos": [297.5, 425],
-      "size": [20, 4]
+      "pos": [
+        297.5,
+        425
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-obstacle-02",
       "element": "obstacle",
       "floor": -1,
-      "pos": [297.5, 430],
+      "pos": [
+        297.5,
+        430
+      ],
       "rotation": 180
     },
     {
       "id": "ug-door-47",
       "element": "door",
       "floor": -1,
-      "pos": [527.5, 720]
+      "pos": [
+        527.5,
+        720
+      ]
     },
     {
       "id": "ug-door-48",
       "element": "door",
       "floor": -1,
-      "pos": [540, 780],
+      "pos": [
+        540,
+        780
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-49",
       "element": "door",
       "floor": -1,
-      "pos": [575, 720],
-      "size": [20, 4]
+      "pos": [
+        575,
+        720
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-50",
       "element": "door",
       "floor": -1,
-      "pos": [610, 780],
+      "pos": [
+        610,
+        780
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-51",
       "element": "door",
       "floor": -1,
-      "pos": [575, 670],
-      "size": [20, 4]
+      "pos": [
+        575,
+        670
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-52",
       "element": "door",
       "floor": -1,
-      "pos": [610, 695],
+      "pos": [
+        610,
+        695
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-locked-01",
       "element": "door-locked",
       "floor": -1,
-      "pos": [735, 655],
+      "pos": [
+        735,
+        655
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "marker": {
-        "offset": [0, 0],
+        "offset": [
+          0,
+          0
+        ],
         "label": 1
       }
     },
@@ -2966,103 +4282,163 @@
       "id": "ug-door-53",
       "element": "door",
       "floor": -1,
-      "pos": [527.5, 620]
+      "pos": [
+        527.5,
+        620
+      ]
     },
     {
       "id": "ug-door-54",
       "element": "door",
       "floor": -1,
-      "pos": [570, 620],
-      "size": [20, 4]
+      "pos": [
+        570,
+        620
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-55",
       "element": "door",
       "floor": -1,
-      "pos": [545, 575],
+      "pos": [
+        545,
+        575
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-56",
       "element": "door",
       "floor": -1,
-      "pos": [616.8, 498.2],
+      "pos": [
+        616.8,
+        498.2
+      ],
       "rotation": 135,
-      "size": [18, 4]
+      "size": [
+        18,
+        4
+      ]
     },
     {
       "id": "ug-door-57",
       "element": "door",
       "floor": -1,
-      "pos": [635, 605],
+      "pos": [
+        635,
+        605
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-58",
       "element": "door",
       "floor": -1,
-      "pos": [695, 595]
+      "pos": [
+        695,
+        595
+      ]
     },
     {
       "id": "ug-door-59",
       "element": "door",
       "floor": -1,
-      "pos": [680, 670]
+      "pos": [
+        680,
+        670
+      ]
     },
     {
       "id": "ug-door-60",
       "element": "door",
       "floor": -1,
-      "pos": [680, 735]
+      "pos": [
+        680,
+        735
+      ]
     },
     {
       "id": "ug-door-61",
       "element": "door",
       "floor": -1,
-      "pos": [545, 515],
+      "pos": [
+        545,
+        515
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-62",
       "element": "door",
       "floor": -1,
-      "pos": [415, 367.5],
+      "pos": [
+        415,
+        367.5
+      ],
       "rotation": 90,
-      "size": [20, 4]
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-obstacle-03",
       "element": "obstacle",
       "floor": -1,
-      "pos": [595, 380]
+      "pos": [
+        595,
+        380
+      ]
     },
     {
       "id": "ug-door-63",
       "element": "door",
       "floor": -1,
-      "pos": [595, 385],
-      "size": [20, 4]
+      "pos": [
+        595,
+        385
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-obstacle-04",
       "element": "obstacle",
       "floor": -1,
-      "pos": [595, 390],
+      "pos": [
+        595,
+        390
+      ],
       "rotation": 180
     },
     {
       "id": "ug-door-64",
       "element": "door",
       "floor": -1,
-      "pos": [475, 730],
+      "pos": [
+        475,
+        730
+      ],
       "inactive": true
     },
     {
       "id": "ug-door-65",
       "element": "door",
       "floor": -1,
-      "pos": [493, 575],
+      "pos": [
+        493,
+        575
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3070,7 +4446,10 @@
       "id": "ug-door-66",
       "element": "door",
       "floor": -1,
-      "pos": [345, 610],
+      "pos": [
+        345,
+        610
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3078,187 +4457,283 @@
       "id": "ug-door-67",
       "element": "door",
       "floor": -1,
-      "pos": [357.5, 550]
+      "pos": [
+        357.5,
+        550
+      ]
     },
     {
       "id": "ug-door-yellow-02",
       "element": "door-yellow",
       "floor": -1,
-      "pos": [320, 640],
-      "size": [20, 4]
+      "pos": [
+        320,
+        640
+      ],
+      "size": [
+        20,
+        4
+      ]
     },
     {
       "id": "ug-door-68",
       "element": "door",
       "floor": -1,
-      "pos": [240, 717.5],
+      "pos": [
+        240,
+        717.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-69",
       "element": "door",
       "floor": -1,
-      "pos": [180, 732.5],
+      "pos": [
+        180,
+        732.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-door-yellow-03",
       "element": "door-yellow",
       "floor": -1,
-      "pos": [465.5, 550]
+      "pos": [
+        465.5,
+        550
+      ]
     },
     {
       "id": "ug-double-door-02",
       "element": "double-door",
       "floor": -1,
-      "pos": [100, 505],
-      "size": [18, 4]
+      "pos": [
+        100,
+        505
+      ],
+      "size": [
+        18,
+        4
+      ]
     },
     {
       "id": "ug-double-door-03",
       "element": "double-door",
       "floor": -1,
-      "pos": [706, 420],
-      "size": [18, 4]
+      "pos": [
+        706,
+        420
+      ],
+      "size": [
+        18,
+        4
+      ]
     },
     {
       "id": "ug-enemy-spawn-01",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [70, 695],
+      "pos": [
+        70,
+        695
+      ],
       "rotation": 270
     },
     {
       "id": "ug-enemy-spawn-02",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [250, 365],
+      "pos": [
+        250,
+        365
+      ],
       "rotation": 180
     },
     {
       "id": "ug-enemy-spawn-03",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [505, 625]
+      "pos": [
+        505,
+        625
+      ]
     },
     {
       "id": "ug-enemy-spawn-04",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [527.5, 805],
+      "pos": [
+        527.5,
+        805
+      ],
       "rotation": 180
     },
     {
       "id": "ug-enemy-spawn-05",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [627.5, 805],
+      "pos": [
+        627.5,
+        805
+      ],
       "rotation": 180
     },
     {
       "id": "ug-enemy-spawn-06",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [685, 629.5],
+      "pos": [
+        685,
+        629.5
+      ],
       "rotation": 90
     },
     {
       "id": "ug-enemy-spawn-07",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [567.5, 295]
+      "pos": [
+        567.5,
+        295
+      ]
     },
     {
       "id": "ug-enemy-spawn-08",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [532.5, 475]
+      "pos": [
+        532.5,
+        475
+      ]
     },
     {
       "id": "ug-enemy-spawn-09",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [280, 365],
+      "pos": [
+        280,
+        365
+      ],
       "rotation": 270
     },
     {
       "id": "ug-enemy-spawn-10",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [436.5, 240]
+      "pos": [
+        436.5,
+        240
+      ]
     },
     {
       "id": "ug-enemy-spawn-11",
       "element": "enemy-spawn",
       "floor": -1,
-      "pos": [750, 435]
+      "pos": [
+        750,
+        435
+      ]
     },
     {
       "id": "ug-vault-window-05",
       "element": "vault-window",
       "floor": -1,
-      "pos": [787, 658],
+      "pos": [
+        787,
+        658
+      ],
       "rotation": 90
     },
     {
       "id": "ug-ladder-01",
       "element": "ladder",
       "floor": -1,
-      "pos": [783, 658],
+      "pos": [
+        783,
+        658
+      ],
       "rotation": 90
     },
     {
       "id": "ug-vault-window-06",
       "element": "vault-window",
       "floor": -1,
-      "pos": [500.5, 347]
+      "pos": [
+        500.5,
+        347
+      ]
     },
     {
       "id": "ug-vault-window-07",
       "element": "vault-window",
       "floor": -1,
-      "pos": [494, 355],
+      "pos": [
+        494,
+        355
+      ],
       "rotation": 90
     },
     {
       "id": "ug-vault-window-08",
       "element": "vault-window",
       "floor": -1,
-      "pos": [635, 390],
+      "pos": [
+        635,
+        390
+      ],
       "rotation": 90
     },
     {
       "id": "ug-vault-window-09",
       "element": "vault-window",
       "floor": -1,
-      "pos": [363.5, 465]
+      "pos": [
+        363.5,
+        465
+      ]
     },
     {
       "id": "ug-vault-window-10",
       "element": "vault-window",
       "floor": -1,
-      "pos": [425, 565],
+      "pos": [
+        425,
+        565
+      ],
       "rotation": 90
     },
     {
       "id": "ug-vault-window-11",
       "element": "vault-window",
       "floor": -1,
-      "pos": [435, 475]
+      "pos": [
+        435,
+        475
+      ]
     },
     {
       "id": "ug-window-14",
       "element": "window",
       "floor": -1,
-      "pos": [370, 650],
+      "pos": [
+        370,
+        650
+      ],
       "rotation": 90
     },
     {
       "id": "ug-shuttle-01",
       "element": "shuttle",
       "floor": -1,
-      "pos": [348.75, 980],
-      "size": [55.5, 14],
+      "pos": [
+        348.75,
+        980
+      ],
+      "size": [
+        55.5,
+        14
+      ],
       "props": {
         "cells": 4,
         "enterable": true,
@@ -3269,8 +4744,14 @@
       "id": "ug-shuttle-02",
       "element": "shuttle",
       "floor": -1,
-      "pos": [348.75, 1080],
-      "size": [55.5, 14],
+      "pos": [
+        348.75,
+        1080
+      ],
+      "size": [
+        55.5,
+        14
+      ],
       "props": {
         "cells": 4,
         "enterable": true
@@ -3281,369 +4762,555 @@
       "id": "ug-record-box-01",
       "element": "record-box",
       "floor": -1,
-      "pos": [440, 663]
+      "pos": [
+        440,
+        663
+      ]
     },
     {
       "id": "ug-record-box-02",
       "element": "record-box",
       "floor": -1,
-      "pos": [90, 795]
+      "pos": [
+        90,
+        795
+      ]
     },
     {
       "id": "ug-record-box-03",
       "element": "record-box",
       "floor": -1,
-      "pos": [105, 550]
+      "pos": [
+        105,
+        550
+      ]
     },
     {
       "id": "ug-record-box-04",
       "element": "record-box",
       "floor": -1,
-      "pos": [210, 473]
+      "pos": [
+        210,
+        473
+      ]
     },
     {
       "id": "ug-record-box-05",
       "element": "record-box",
       "floor": -1,
-      "pos": [357.5, 415]
+      "pos": [
+        357.5,
+        415
+      ]
     },
     {
       "id": "ug-record-box-06",
       "element": "record-box",
       "floor": -1,
-      "pos": [488, 325]
+      "pos": [
+        488,
+        325
+      ]
     },
     {
       "id": "ug-record-box-07",
       "element": "record-box",
       "floor": -1,
-      "pos": [540, 500]
+      "pos": [
+        540,
+        500
+      ]
     },
     {
       "id": "ug-record-box-08",
       "element": "record-box",
       "floor": -1,
-      "pos": [737.5, 466.5]
+      "pos": [
+        737.5,
+        466.5
+      ]
     },
     {
       "id": "ug-record-box-09",
       "element": "record-box",
       "floor": -1,
-      "pos": [760, 685]
+      "pos": [
+        760,
+        685
+      ]
     },
     {
       "id": "ug-record-box-10",
       "element": "record-box",
       "floor": -1,
-      "pos": [760, 740]
+      "pos": [
+        760,
+        740
+      ]
     },
     {
       "id": "ug-record-box-11",
       "element": "record-box",
       "floor": -1,
-      "pos": [645, 690]
+      "pos": [
+        645,
+        690
+      ]
     },
     {
       "id": "ug-record-box-12",
       "element": "record-box",
       "floor": -1,
-      "pos": [605, 465]
+      "pos": [
+        605,
+        465
+      ]
     },
     {
       "id": "ug-record-box-13",
       "element": "record-box",
       "floor": -1,
-      "pos": [705, 765]
+      "pos": [
+        705,
+        765
+      ]
     },
     {
       "id": "ug-record-box-14",
       "element": "record-box",
       "floor": -1,
-      "pos": [315, 775]
+      "pos": [
+        315,
+        775
+      ]
     },
     {
       "id": "ug-record-box-15",
       "element": "record-box",
       "floor": -1,
-      "pos": [272.5, 460]
+      "pos": [
+        272.5,
+        460
+      ]
     },
     {
       "id": "ug-record-box-16",
       "element": "record-box",
       "floor": -1,
-      "pos": [140, 582.5]
+      "pos": [
+        140,
+        582.5
+      ]
     },
     {
       "id": "ug-record-box-17",
       "element": "record-box",
       "floor": -1,
-      "pos": [410, 332.5]
+      "pos": [
+        410,
+        332.5
+      ]
     },
     {
       "id": "ug-record-box-18",
       "element": "record-box",
       "floor": -1,
-      "pos": [585, 285]
+      "pos": [
+        585,
+        285
+      ]
     },
     {
       "id": "ug-record-box-19",
       "element": "record-box",
       "floor": -1,
-      "pos": [635, 563.5]
+      "pos": [
+        635,
+        563.5
+      ]
     },
     {
       "id": "ug-record-box-20",
       "element": "record-box",
       "floor": -1,
-      "pos": [500.5, 354.5]
+      "pos": [
+        500.5,
+        354.5
+      ]
     },
     {
       "id": "ug-record-box-21",
       "element": "record-box",
       "floor": -1,
-      "pos": [450.5, 555.5]
+      "pos": [
+        450.5,
+        555.5
+      ]
     },
     {
       "id": "ug-record-box-22",
       "element": "record-box",
       "floor": -1,
-      "pos": [185, 755]
+      "pos": [
+        185,
+        755
+      ]
     },
     {
       "id": "ug-record-box-23",
       "element": "record-box",
       "floor": -1,
-      "pos": [75, 781]
+      "pos": [
+        75,
+        781
+      ]
     },
     {
       "id": "ug-record-box-24",
       "element": "record-box",
       "floor": -1,
-      "pos": [622.5, 362.5]
+      "pos": [
+        622.5,
+        362.5
+      ]
     },
     {
       "id": "ug-record-box-25",
       "element": "record-box",
       "floor": -1,
-      "pos": [592.5, 362.5]
+      "pos": [
+        592.5,
+        362.5
+      ]
     },
     {
       "id": "ug-record-box-26",
       "element": "record-box",
       "floor": -1,
-      "pos": [473, 275]
+      "pos": [
+        473,
+        275
+      ]
     },
     {
       "id": "ug-record-box-27",
       "element": "record-box",
       "floor": -1,
-      "pos": [508, 587.5]
+      "pos": [
+        508,
+        587.5
+      ]
     },
     {
       "id": "ug-record-box-28",
       "element": "record-box",
       "floor": -1,
-      "pos": [550, 705]
+      "pos": [
+        550,
+        705
+      ]
     },
     {
       "id": "ug-record-box-29",
       "element": "record-box",
       "floor": -1,
-      "pos": [637.5, 737.5]
+      "pos": [
+        637.5,
+        737.5
+      ]
     },
     {
       "id": "ug-record-box-30",
       "element": "record-box",
       "floor": -1,
-      "pos": [637.5, 760]
+      "pos": [
+        637.5,
+        760
+      ]
     },
     {
       "id": "ug-record-box-31",
       "element": "record-box",
       "floor": -1,
-      "pos": [610, 610]
+      "pos": [
+        610,
+        610
+      ]
     },
     {
       "id": "ug-record-box-32",
       "element": "record-box",
       "floor": -1,
-      "pos": [680, 757.5]
+      "pos": [
+        680,
+        757.5
+      ]
     },
     {
       "id": "ug-record-box-33",
       "element": "record-box",
       "floor": -1,
-      "pos": [548, 592.5]
+      "pos": [
+        548,
+        592.5
+      ]
     },
     {
       "id": "ug-record-box-34",
       "element": "record-box",
       "floor": -1,
-      "pos": [488, 462.5]
+      "pos": [
+        488,
+        462.5
+      ]
     },
     {
       "id": "ug-record-box-35",
       "element": "record-box",
       "floor": -1,
-      "pos": [555, 300]
+      "pos": [
+        555,
+        300
+      ]
     },
     {
       "id": "ug-record-box-36",
       "element": "record-box",
       "floor": -1,
-      "pos": [202.5, 640]
+      "pos": [
+        202.5,
+        640
+      ]
     },
     {
       "id": "ug-record-box-37",
       "element": "record-box",
       "floor": -1,
-      "pos": [340, 385]
+      "pos": [
+        340,
+        385
+      ]
     },
     {
       "id": "ug-record-box-38",
       "element": "record-box",
       "floor": -1,
-      "pos": [287.5, 460]
+      "pos": [
+        287.5,
+        460
+      ]
     },
     {
       "id": "ug-record-box-39",
       "element": "record-box",
       "floor": -1,
-      "pos": [220, 370]
+      "pos": [
+        220,
+        370
+      ]
     },
     {
       "id": "ug-record-box-40",
       "element": "record-box",
       "floor": -1,
-      "pos": [220, 485.5]
+      "pos": [
+        220,
+        485.5
+      ]
     },
     {
       "id": "ug-record-box-41",
       "element": "record-box",
       "floor": -1,
-      "pos": [182.5, 630]
+      "pos": [
+        182.5,
+        630
+      ]
     },
     {
       "id": "ug-record-box-42",
       "element": "record-box",
       "floor": -1,
-      "pos": [695, 645]
+      "pos": [
+        695,
+        645
+      ]
     },
     {
       "id": "ug-record-box-43",
       "element": "record-box",
       "floor": -1,
-      "pos": [444, 284.5]
+      "pos": [
+        444,
+        284.5
+      ]
     },
     {
       "id": "ug-record-box-44",
       "element": "record-box",
       "floor": -1,
-      "pos": [600, 550]
+      "pos": [
+        600,
+        550
+      ]
     },
     {
       "id": "ug-record-box-45",
       "element": "record-box",
       "floor": -1,
-      "pos": [550, 482.5]
+      "pos": [
+        550,
+        482.5
+      ]
     },
     {
       "id": "ug-record-box-46",
       "element": "record-box",
       "floor": -1,
-      "pos": [730, 685]
+      "pos": [
+        730,
+        685
+      ]
     },
     {
       "id": "ug-record-box-47",
       "element": "record-box",
       "floor": -1,
-      "pos": [376.5, 488]
+      "pos": [
+        376.5,
+        488
+      ]
     },
     {
       "id": "ug-start-point-01",
       "element": "start-point",
       "floor": -1,
-      "pos": [350, 1164.5]
+      "pos": [
+        350,
+        1164.5
+      ]
     },
     {
       "id": "f1-door-01",
       "element": "door",
       "floor": 0,
-      "pos": [250, 800],
+      "pos": [
+        250,
+        800
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-02",
       "element": "door",
       "floor": 0,
-      "pos": [285, 840],
+      "pos": [
+        285,
+        840
+      ],
       "inactive": true
     },
     {
       "id": "f1-double-door-01",
       "element": "double-door",
       "floor": 0,
-      "pos": [460, 900],
+      "pos": [
+        460,
+        900
+      ],
       "rotation": 90,
-      "size": [40, 4],
+      "size": [
+        40,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-03",
       "element": "door",
       "floor": 0,
-      "pos": [465, 815],
+      "pos": [
+        465,
+        815
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-04",
       "element": "door",
       "floor": 0,
-      "pos": [430, 815],
+      "pos": [
+        430,
+        815
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-05",
       "element": "door",
       "floor": 0,
-      "pos": [430, 780],
+      "pos": [
+        430,
+        780
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-06",
       "element": "door",
       "floor": 0,
-      "pos": [465, 780],
+      "pos": [
+        465,
+        780
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-07",
       "element": "door",
       "floor": 0,
-      "pos": [397.5, 875],
-      "size": [20, 4],
+      "pos": [
+        397.5,
+        875
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-08",
       "element": "door",
       "floor": 0,
-      "pos": [545, 205],
-      "size": [20, 4],
+      "pos": [
+        545,
+        205
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-09",
       "element": "door",
       "floor": 0,
-      "pos": [545, 870],
+      "pos": [
+        545,
+        870
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-10",
       "element": "door",
       "floor": 0,
-      "pos": [620, 857.5],
+      "pos": [
+        620,
+        857.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3651,14 +5318,20 @@
       "id": "f1-door-11",
       "element": "door",
       "floor": 0,
-      "pos": [202.5, 290],
+      "pos": [
+        202.5,
+        290
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-12",
       "element": "door",
       "floor": 0,
-      "pos": [685, 805],
+      "pos": [
+        685,
+        805
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3666,7 +5339,10 @@
       "id": "f1-door-13",
       "element": "door",
       "floor": 0,
-      "pos": [730, 775],
+      "pos": [
+        730,
+        775
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3674,7 +5350,10 @@
       "id": "f1-door-14",
       "element": "door",
       "floor": 0,
-      "pos": [730, 700],
+      "pos": [
+        730,
+        700
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3682,7 +5361,10 @@
       "id": "f1-door-15",
       "element": "door",
       "floor": 0,
-      "pos": [730, 615],
+      "pos": [
+        730,
+        615
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3690,7 +5372,10 @@
       "id": "f1-door-16",
       "element": "door",
       "floor": 0,
-      "pos": [765, 642.5],
+      "pos": [
+        765,
+        642.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3698,7 +5383,10 @@
       "id": "f1-door-17",
       "element": "door",
       "floor": 0,
-      "pos": [765, 662.5],
+      "pos": [
+        765,
+        662.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3706,7 +5394,10 @@
       "id": "f1-door-18",
       "element": "door",
       "floor": 0,
-      "pos": [765, 702.5],
+      "pos": [
+        765,
+        702.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3714,7 +5405,10 @@
       "id": "f1-door-19",
       "element": "door",
       "floor": 0,
-      "pos": [765, 727.5],
+      "pos": [
+        765,
+        727.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3722,7 +5416,10 @@
       "id": "f1-door-20",
       "element": "door",
       "floor": 0,
-      "pos": [745, 1010],
+      "pos": [
+        745,
+        1010
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3730,7 +5427,10 @@
       "id": "f1-door-21",
       "element": "door",
       "floor": 0,
-      "pos": [680, 1010],
+      "pos": [
+        680,
+        1010
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3738,15 +5438,24 @@
       "id": "f1-door-22",
       "element": "door",
       "floor": 0,
-      "pos": [645, 965],
-      "size": [20, 4],
+      "pos": [
+        645,
+        965
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-23",
       "element": "door",
       "floor": 0,
-      "pos": [150, 805],
+      "pos": [
+        150,
+        805
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3754,35 +5463,50 @@
       "id": "f1-door-24",
       "element": "door",
       "floor": 0,
-      "pos": [180, 730],
+      "pos": [
+        180,
+        730
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-25",
       "element": "door",
       "floor": 0,
-      "pos": [180, 695],
+      "pos": [
+        180,
+        695
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-26",
       "element": "door",
       "floor": 0,
-      "pos": [292.5, 655],
+      "pos": [
+        292.5,
+        655
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-27",
       "element": "door",
       "floor": 0,
-      "pos": [260, 705],
+      "pos": [
+        260,
+        705
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-28",
       "element": "door",
       "floor": 0,
-      "pos": [245, 580],
+      "pos": [
+        245,
+        580
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3790,7 +5514,10 @@
       "id": "f1-door-29",
       "element": "door",
       "floor": 0,
-      "pos": [310, 600],
+      "pos": [
+        310,
+        600
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3798,44 +5525,65 @@
       "id": "f1-door-30",
       "element": "door",
       "floor": 0,
-      "pos": [190, 570],
+      "pos": [
+        190,
+        570
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-31",
       "element": "door",
       "floor": 0,
-      "pos": [165, 550],
+      "pos": [
+        165,
+        550
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-32",
       "element": "door",
       "floor": 0,
-      "pos": [130, 465],
+      "pos": [
+        130,
+        465
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-33",
       "element": "door",
       "floor": 0,
-      "pos": [130, 355],
+      "pos": [
+        130,
+        355
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-34",
       "element": "door",
       "floor": 0,
-      "pos": [212.5, 355],
+      "pos": [
+        212.5,
+        355
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-35",
       "element": "door",
       "floor": 0,
-      "pos": [220, 555],
+      "pos": [
+        220,
+        555
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3843,7 +5591,10 @@
       "id": "f1-door-36",
       "element": "door",
       "floor": 0,
-      "pos": [310, 555],
+      "pos": [
+        310,
+        555
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3851,7 +5602,10 @@
       "id": "f1-door-37",
       "element": "door",
       "floor": 0,
-      "pos": [185, 450],
+      "pos": [
+        185,
+        450
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3859,23 +5613,35 @@
       "id": "f1-door-38",
       "element": "door",
       "floor": 0,
-      "pos": [257.5, 290],
+      "pos": [
+        257.5,
+        290
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-39",
       "element": "door",
       "floor": 0,
-      "pos": [345, 245],
+      "pos": [
+        345,
+        245
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-40",
       "element": "door",
       "floor": 0,
-      "pos": [455, 285],
+      "pos": [
+        455,
+        285
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3883,7 +5649,10 @@
       "id": "f1-door-41",
       "element": "door",
       "floor": 0,
-      "pos": [490, 235],
+      "pos": [
+        490,
+        235
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3891,43 +5660,64 @@
       "id": "f1-door-42",
       "element": "door",
       "floor": 0,
-      "pos": [466, 320],
+      "pos": [
+        466,
+        320
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-43",
       "element": "door",
       "floor": 0,
-      "pos": [466, 355],
+      "pos": [
+        466,
+        355
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-44",
       "element": "door",
       "floor": 0,
-      "pos": [527.5, 295],
+      "pos": [
+        527.5,
+        295
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-45",
       "element": "door",
       "floor": 0,
-      "pos": [557, 295],
-      "size": [23, 4],
+      "pos": [
+        557,
+        295
+      ],
+      "size": [
+        23,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-46",
       "element": "door",
       "floor": 0,
-      "pos": [530, 380],
+      "pos": [
+        530,
+        380
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-47",
       "element": "door",
       "floor": 0,
-      "pos": [517.5, 327.5],
+      "pos": [
+        517.5,
+        327.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3935,7 +5725,10 @@
       "id": "f1-door-48",
       "element": "door",
       "floor": 0,
-      "pos": [517.5, 347.5],
+      "pos": [
+        517.5,
+        347.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3943,7 +5736,10 @@
       "id": "f1-door-49",
       "element": "door",
       "floor": 0,
-      "pos": [570, 240],
+      "pos": [
+        570,
+        240
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3951,7 +5747,10 @@
       "id": "f1-door-50",
       "element": "door",
       "floor": 0,
-      "pos": [615, 310],
+      "pos": [
+        615,
+        310
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3959,14 +5758,20 @@
       "id": "f1-door-51",
       "element": "door",
       "floor": 0,
-      "pos": [660, 265],
+      "pos": [
+        660,
+        265
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-52",
       "element": "door",
       "floor": 0,
-      "pos": [700, 275],
+      "pos": [
+        700,
+        275
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3974,7 +5779,10 @@
       "id": "f1-door-53",
       "element": "door",
       "floor": 0,
-      "pos": [700, 335],
+      "pos": [
+        700,
+        335
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -3982,22 +5790,34 @@
       "id": "f1-door-54",
       "element": "door",
       "floor": 0,
-      "pos": [650, 435],
+      "pos": [
+        650,
+        435
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-55",
       "element": "door",
       "floor": 0,
-      "pos": [665, 555],
-      "size": [20, 4],
+      "pos": [
+        665,
+        555
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-56",
       "element": "door",
       "floor": 0,
-      "pos": [615, 470],
+      "pos": [
+        615,
+        470
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4005,7 +5825,10 @@
       "id": "f1-door-57",
       "element": "door",
       "floor": 0,
-      "pos": [515, 495],
+      "pos": [
+        515,
+        495
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4013,31 +5836,49 @@
       "id": "f1-door-58",
       "element": "door",
       "floor": 0,
-      "pos": [472.5, 435],
+      "pos": [
+        472.5,
+        435
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-59",
       "element": "door",
       "floor": 0,
-      "pos": [487.5, 515],
-      "size": [20, 4],
+      "pos": [
+        487.5,
+        515
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-60",
       "element": "door",
       "floor": 0,
-      "pos": [615, 622.5],
+      "pos": [
+        615,
+        622.5
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-61",
       "element": "door",
       "floor": 0,
-      "pos": [220, 490],
+      "pos": [
+        220,
+        490
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4045,7 +5886,10 @@
       "id": "f1-door-62",
       "element": "door",
       "floor": 0,
-      "pos": [310, 430],
+      "pos": [
+        310,
+        430
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4053,37 +5897,55 @@
       "id": "f1-door-63",
       "element": "door",
       "floor": 0,
-      "pos": [287.5, 510],
+      "pos": [
+        287.5,
+        510
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-64",
       "element": "door",
       "floor": 0,
-      "pos": [345, 480],
+      "pos": [
+        345,
+        480
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-65",
       "element": "door",
       "floor": 0,
-      "pos": [362.5, 410],
+      "pos": [
+        362.5,
+        410
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-66",
       "element": "door",
       "floor": 0,
-      "pos": [395, 525],
+      "pos": [
+        395,
+        525
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-67",
       "element": "door",
       "floor": 0,
-      "pos": [345, 582.5],
+      "pos": [
+        345,
+        582.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4091,32 +5953,50 @@
       "id": "f1-door-68",
       "element": "door",
       "floor": 0,
-      "pos": [345, 320],
+      "pos": [
+        345,
+        320
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-69",
       "element": "door",
       "floor": 0,
-      "pos": [580, 355],
+      "pos": [
+        580,
+        355
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-70",
       "element": "door",
       "floor": 0,
-      "pos": [247.5, 405],
+      "pos": [
+        247.5,
+        405
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-71",
       "element": "door",
       "floor": 0,
-      "pos": [275, 447.5],
+      "pos": [
+        275,
+        447.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4124,16 +6004,25 @@
       "id": "f1-door-72",
       "element": "door",
       "floor": 0,
-      "pos": [710, 415],
+      "pos": [
+        710,
+        415
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-01",
       "element": "window",
       "floor": 0,
-      "pos": [310, 480],
+      "pos": [
+        310,
+        480
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4141,7 +6030,10 @@
       "id": "f1-door-73",
       "element": "door",
       "floor": 0,
-      "pos": [515, 582.5],
+      "pos": [
+        515,
+        582.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4149,23 +6041,38 @@
       "id": "f1-door-74",
       "element": "door",
       "floor": 0,
-      "pos": [585, 555],
-      "size": [20, 4],
+      "pos": [
+        585,
+        555
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-75",
       "element": "door",
       "floor": 0,
-      "pos": [550, 820],
-      "size": [20, 4],
+      "pos": [
+        550,
+        820
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-76",
       "element": "door",
       "floor": 0,
-      "pos": [375, 860],
+      "pos": [
+        375,
+        860
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4173,40 +6080,67 @@
       "id": "f1-door-77",
       "element": "door",
       "floor": 0,
-      "pos": [315, 760],
-      "size": [30, 4],
+      "pos": [
+        315,
+        760
+      ],
+      "size": [
+        30,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-78",
       "element": "door",
       "floor": 0,
-      "pos": [329, 410],
-      "size": [30, 4],
+      "pos": [
+        329,
+        410
+      ],
+      "size": [
+        30,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-79",
       "element": "door",
       "floor": 0,
-      "pos": [510, 410],
+      "pos": [
+        510,
+        410
+      ],
       "rotation": 90,
-      "size": [30, 4],
+      "size": [
+        30,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-80",
       "element": "door",
       "floor": 0,
-      "pos": [532.5, 570],
-      "size": [30, 4],
+      "pos": [
+        532.5,
+        570
+      ],
+      "size": [
+        30,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-81",
       "element": "door",
       "floor": 0,
-      "pos": [260, 515],
+      "pos": [
+        260,
+        515
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4214,24 +6148,39 @@
       "id": "f1-door-82",
       "element": "door",
       "floor": 0,
-      "pos": [550, 595],
+      "pos": [
+        550,
+        595
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-83",
       "element": "door",
       "floor": 0,
-      "pos": [395, 780],
-      "size": [20, 4],
+      "pos": [
+        395,
+        780
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-barricaded-01",
       "element": "door-barricaded",
       "floor": 0,
-      "pos": [525, 925],
+      "pos": [
+        525,
+        925
+      ],
       "rotation": 270,
       "inactive": true
     },
@@ -4239,7 +6188,10 @@
       "id": "f1-door-barricaded-02",
       "element": "door-barricaded",
       "floor": 0,
-      "pos": [695, 665],
+      "pos": [
+        695,
+        665
+      ],
       "rotation": 270,
       "inactive": true
     },
@@ -4247,7 +6199,10 @@
       "id": "f1-vault-window-01",
       "element": "vault-window",
       "floor": 0,
-      "pos": [455, 845],
+      "pos": [
+        455,
+        845
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4255,7 +6210,10 @@
       "id": "f1-vault-window-02",
       "element": "vault-window",
       "floor": 0,
-      "pos": [645, 545],
+      "pos": [
+        645,
+        545
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4263,14 +6221,20 @@
       "id": "f1-window-double-01",
       "element": "window-double",
       "floor": 0,
-      "pos": [217.5, 695],
+      "pos": [
+        217.5,
+        695
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-double-02",
       "element": "window-double",
       "floor": 0,
-      "pos": [165, 480],
+      "pos": [
+        165,
+        480
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4278,7 +6242,10 @@
       "id": "f1-window-02",
       "element": "window",
       "floor": 0,
-      "pos": [242, 835],
+      "pos": [
+        242,
+        835
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4286,7 +6253,10 @@
       "id": "f1-ladder-01",
       "element": "ladder",
       "floor": 0,
-      "pos": [238, 835],
+      "pos": [
+        238,
+        835
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4294,7 +6264,10 @@
       "id": "f1-window-03",
       "element": "window",
       "floor": 0,
-      "pos": [610, 970],
+      "pos": [
+        610,
+        970
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4302,7 +6275,10 @@
       "id": "f1-window-04",
       "element": "window",
       "floor": 0,
-      "pos": [742.5, 805],
+      "pos": [
+        742.5,
+        805
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4310,7 +6286,10 @@
       "id": "f1-window-05",
       "element": "window",
       "floor": 0,
-      "pos": [615, 545],
+      "pos": [
+        615,
+        545
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4318,7 +6297,10 @@
       "id": "f1-window-double-03",
       "element": "window-double",
       "floor": 0,
-      "pos": [615, 240],
+      "pos": [
+        615,
+        240
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4326,16 +6308,25 @@
       "id": "f1-window-06",
       "element": "window",
       "floor": 0,
-      "pos": [172.5, 322.5],
+      "pos": [
+        172.5,
+        322.5
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-double-04",
       "element": "window-double",
       "floor": 0,
-      "pos": [210, 440],
+      "pos": [
+        210,
+        440
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4343,78 +6334,114 @@
       "id": "f1-window-double-05",
       "element": "window-double",
       "floor": 0,
-      "pos": [292.5, 415],
+      "pos": [
+        292.5,
+        415
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-07",
       "element": "window",
       "floor": 0,
-      "pos": [670, 595],
+      "pos": [
+        670,
+        595
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-08",
       "element": "window",
       "floor": 0,
-      "pos": [670, 650],
+      "pos": [
+        670,
+        650
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-09",
       "element": "window",
       "floor": 0,
-      "pos": [110, 790],
-      "size": [20, 4],
+      "pos": [
+        110,
+        790
+      ],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-10",
       "element": "window",
       "floor": 0,
-      "pos": [443.5, 570],
+      "pos": [
+        443.5,
+        570
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-11",
       "element": "window",
       "floor": 0,
-      "pos": [411.5, 570],
+      "pos": [
+        411.5,
+        570
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-12",
       "element": "window",
       "floor": 0,
-      "pos": [565, 435],
+      "pos": [
+        565,
+        435
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-13",
       "element": "window",
       "floor": 0,
-      "pos": [555, 435],
+      "pos": [
+        555,
+        435
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-14",
       "element": "window",
       "floor": 0,
-      "pos": [435, 360],
+      "pos": [
+        435,
+        360
+      ],
       "inactive": true
     },
     {
       "id": "f1-window-15",
       "element": "window",
       "floor": 0,
-      "pos": [425, 360],
+      "pos": [
+        425,
+        360
+      ],
       "inactive": true
     },
     {
       "id": "f1-vault-window-03",
       "element": "vault-window",
       "floor": 0,
-      "pos": [790.642, 900.142],
+      "pos": [
+        790.642,
+        900.142
+      ],
       "rotation": 135,
       "inactive": true
     },
@@ -4422,16 +6449,25 @@
       "id": "f1-ladder-02",
       "element": "ladder",
       "floor": 0,
-      "pos": [385, 490],
+      "pos": [
+        385,
+        490
+      ],
       "rotation": 90,
-      "size": [20, 3],
+      "size": [
+        20,
+        3
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-03",
       "element": "ladder",
       "floor": 0,
-      "pos": [410, 461],
+      "pos": [
+        410,
+        461
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4439,118 +6475,175 @@
       "id": "f1-ladder-04",
       "element": "ladder",
       "floor": 0,
-      "pos": [420, 467.5],
+      "pos": [
+        420,
+        467.5
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-05",
       "element": "ladder",
       "floor": 0,
-      "pos": [486, 332.5],
+      "pos": [
+        486,
+        332.5
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-06",
       "element": "ladder",
       "floor": 0,
-      "pos": [528, 317.5],
+      "pos": [
+        528,
+        317.5
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-07",
       "element": "ladder",
       "floor": 0,
-      "pos": [528, 357.5],
+      "pos": [
+        528,
+        357.5
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-08",
       "element": "ladder",
       "floor": 0,
-      "pos": [777.5, 655],
+      "pos": [
+        777.5,
+        655
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-09",
       "element": "ladder",
       "floor": 0,
-      "pos": [777.5, 690],
+      "pos": [
+        777.5,
+        690
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-10",
       "element": "ladder",
       "floor": 0,
-      "pos": [777.5, 715],
+      "pos": [
+        777.5,
+        715
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-11",
       "element": "ladder",
       "floor": 0,
-      "pos": [468, 405],
+      "pos": [
+        468,
+        405
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-12",
       "element": "ladder",
       "floor": 0,
-      "pos": [607.5, 292.5],
+      "pos": [
+        607.5,
+        292.5
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-13",
       "element": "ladder",
       "floor": 0,
-      "pos": [577.5, 257.5],
+      "pos": [
+        577.5,
+        257.5
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-14",
       "element": "ladder",
       "floor": 0,
-      "pos": [577.5, 292.5],
+      "pos": [
+        577.5,
+        292.5
+      ],
       "inactive": true
     },
     {
       "id": "f1-ladder-15",
       "element": "ladder",
       "floor": 0,
-      "pos": [662.5, 710],
+      "pos": [
+        662.5,
+        710
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-84",
       "element": "door",
       "floor": 0,
-      "pos": [615, 410],
+      "pos": [
+        615,
+        410
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-85",
       "element": "door",
       "floor": 0,
-      "pos": [275, 377.5],
+      "pos": [
+        275,
+        377.5
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-door-86",
       "element": "door",
       "floor": 0,
-      "pos": [345, 540],
+      "pos": [
+        345,
+        540
+      ],
       "rotation": 90,
-      "size": [20, 4],
+      "size": [
+        20,
+        4
+      ],
       "inactive": true
     },
     {
       "id": "f1-enemy-spawn-01",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [412.5, 930],
+      "pos": [
+        412.5,
+        930
+      ],
       "rotation": 180,
       "inactive": true
     },
@@ -4558,7 +6651,10 @@
       "id": "f1-enemy-spawn-02",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [420, 737.5],
+      "pos": [
+        420,
+        737.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4566,7 +6662,10 @@
       "id": "f1-enemy-spawn-03",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [517.5, 772.5],
+      "pos": [
+        517.5,
+        772.5
+      ],
       "rotation": 270,
       "inactive": true
     },
@@ -4574,7 +6673,10 @@
       "id": "f1-enemy-spawn-04",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [627.5, 435],
+      "pos": [
+        627.5,
+        435
+      ],
       "rotation": 180,
       "inactive": true
     },
@@ -4582,7 +6684,10 @@
       "id": "f1-enemy-spawn-05",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [525, 435],
+      "pos": [
+        525,
+        435
+      ],
       "rotation": 180,
       "inactive": true
     },
@@ -4590,7 +6695,10 @@
       "id": "f1-enemy-spawn-06",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [460, 452.5],
+      "pos": [
+        460,
+        452.5
+      ],
       "rotation": 270,
       "inactive": true
     },
@@ -4598,7 +6706,10 @@
       "id": "f1-enemy-spawn-07",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [430, 477.5],
+      "pos": [
+        430,
+        477.5
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4606,14 +6717,20 @@
       "id": "f1-enemy-spawn-08",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [445, 515],
+      "pos": [
+        445,
+        515
+      ],
       "inactive": true
     },
     {
       "id": "f1-enemy-spawn-09",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [262.5, 460],
+      "pos": [
+        262.5,
+        460
+      ],
       "rotation": 180,
       "inactive": true
     },
@@ -4621,7 +6738,10 @@
       "id": "f1-enemy-spawn-10",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [220, 245],
+      "pos": [
+        220,
+        245
+      ],
       "rotation": 270,
       "inactive": true
     },
@@ -4629,7 +6749,10 @@
       "id": "f1-enemy-spawn-11",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [730, 680],
+      "pos": [
+        730,
+        680
+      ],
       "rotation": 90,
       "inactive": true
     },
@@ -4637,14 +6760,20 @@
       "id": "f1-enemy-spawn-12",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [112.5, 730],
+      "pos": [
+        112.5,
+        730
+      ],
       "inactive": true
     },
     {
       "id": "f1-enemy-spawn-13",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [525, 952.5],
+      "pos": [
+        525,
+        952.5
+      ],
       "rotation": 270,
       "inactive": true
     },
@@ -4652,7 +6781,10 @@
       "id": "f1-enemy-spawn-14",
       "element": "enemy-spawn",
       "floor": 0,
-      "pos": [791.945, 879.445],
+      "pos": [
+        791.945,
+        879.445
+      ],
       "rotation": 45,
       "inactive": true
     },
@@ -4660,9 +6792,15 @@
       "id": "f1-shuttle-exit-01",
       "element": "shuttle-exit",
       "floor": 0,
-      "pos": [895, 407.75],
+      "pos": [
+        895,
+        407.75
+      ],
       "rotation": 270,
-      "size": [55.5, 14],
+      "size": [
+        55.5,
+        14
+      ],
       "props": {
         "cells": 4,
         "enterable": true,
@@ -4673,9 +6811,15 @@
       "id": "f1-shuttle-01",
       "element": "shuttle",
       "floor": 0,
-      "pos": [995, 407.75],
+      "pos": [
+        995,
+        407.75
+      ],
       "rotation": 270,
-      "size": [55.5, 14],
+      "size": [
+        55.5,
+        14
+      ],
       "props": {
         "cells": 4,
         "enterable": true
@@ -4686,14 +6830,20 @@
       "id": "f1-vault-window-04",
       "element": "vault-window",
       "floor": 0,
-      "pos": [792, 668],
+      "pos": [
+        792,
+        668
+      ],
       "rotation": 90
     },
     {
       "id": "f1-exit-point-01",
       "element": "exit-point",
       "floor": 0,
-      "pos": [1090, 407]
+      "pos": [
+        1090,
+        407
+      ]
     }
   ],
   "routes": [],
@@ -4966,7 +7116,10 @@
       "color": "#000000",
       "strokeWidth": 0.5,
       "fill": "#BB0000",
-      "pos": [420.5, 663.75],
+      "pos": [
+        420.5,
+        663.75
+      ],
       "radius": 1
     },
     {
@@ -5102,7 +7255,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [714.814, 340.909],
+      "pos": [
+        714.814,
+        340.909
+      ],
       "radius": 0.698
     },
     {
@@ -5117,7 +7273,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [720.529, 340.909],
+      "pos": [
+        720.529,
+        340.909
+      ],
       "radius": 0.698
     },
     {
@@ -5146,7 +7305,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [494.814, 306.909],
+      "pos": [
+        494.814,
+        306.909
+      ],
       "radius": 0.698
     },
     {
@@ -5161,7 +7323,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [500.529, 306.909],
+      "pos": [
+        500.529,
+        306.909
+      ],
       "radius": 0.698
     },
     {
@@ -5190,7 +7355,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [494.314, 356.409],
+      "pos": [
+        494.314,
+        356.409
+      ],
       "radius": 0.698
     },
     {
@@ -5205,7 +7373,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [500.029, 356.409],
+      "pos": [
+        500.029,
+        356.409
+      ],
       "radius": 0.698
     },
     {
@@ -5278,7 +7449,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [238.814, 495.909],
+      "pos": [
+        238.814,
+        495.909
+      ],
       "radius": 0.698
     },
     {
@@ -5293,7 +7467,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [244.529, 495.909],
+      "pos": [
+        244.529,
+        495.909
+      ],
       "radius": 0.698
     },
     {
@@ -5575,7 +7752,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [756.814, 762.909],
+      "pos": [
+        756.814,
+        762.909
+      ],
       "radius": 0.698
     },
     {
@@ -5590,7 +7770,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [762.529, 762.909],
+      "pos": [
+        762.529,
+        762.909
+      ],
       "radius": 0.698
     },
     {
@@ -5619,7 +7802,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [743.814, 635.909],
+      "pos": [
+        743.814,
+        635.909
+      ],
       "radius": 0.698
     },
     {
@@ -5634,7 +7820,10 @@
       "floor": 0,
       "color": "#00000000",
       "fill": "#00000077",
-      "pos": [749.529, 635.909],
+      "pos": [
+        749.529,
+        635.909
+      ],
       "radius": 0.698
     },
     {
@@ -5914,7 +8103,10 @@
       "color": "#000000",
       "strokeWidth": 1.5,
       "fill": "#171717",
-      "pos": [571, 745],
+      "pos": [
+        571,
+        745
+      ],
       "radius": 4
     },
     {
@@ -5931,7 +8123,10 @@
       "color": "#000000",
       "strokeWidth": 1.5,
       "fill": "#171717",
-      "pos": [581, 745],
+      "pos": [
+        581,
+        745
+      ],
       "radius": 4
     },
     {
@@ -5948,7 +8143,10 @@
       "color": "#000000",
       "strokeWidth": 1.5,
       "fill": "#171717",
-      "pos": [591, 745],
+      "pos": [
+        591,
+        745
+      ],
       "radius": 4
     },
     {
@@ -5965,7 +8163,10 @@
       "color": "#000000",
       "strokeWidth": 1.5,
       "fill": "#171717",
-      "pos": [601, 745],
+      "pos": [
+        601,
+        745
+      ],
       "radius": 4
     },
     {

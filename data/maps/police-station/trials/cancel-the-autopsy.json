@@ -28,55 +28,74 @@
     {
       "id": "enemies",
       "name": "Enemies",
-      "categories": ["enemy"],
+      "categories": [
+        "enemy"
+      ],
       "default": true
     },
     {
       "id": "keys",
       "name": "Keys & Locks",
-      "categories": ["key"],
+      "categories": [
+        "key"
+      ],
       "default": true
     },
     {
       "id": "doors",
       "name": "Doors & Stairs",
-      "categories": ["door", "stairs"],
+      "categories": [
+        "door",
+        "stairs"
+      ],
       "default": true
     },
     {
       "id": "objectives",
       "name": "Objectives",
-      "categories": ["objective"],
+      "categories": [
+        "objective"
+      ],
       "default": true
     },
     {
       "id": "items",
       "name": "Items",
-      "categories": ["item"],
+      "categories": [
+        "item"
+      ],
       "default": true
     },
     {
       "id": "gas-cans",
       "name": "Gas Cans",
-      "categories": ["gas-can"],
+      "categories": [
+        "gas-can"
+      ],
       "default": true
     },
     {
       "id": "generators",
       "name": "Generators",
-      "categories": ["generator"],
+      "categories": [
+        "generator"
+      ],
       "default": true
     },
     {
       "id": "record-boxes",
       "name": "Record Boxes",
-      "categories": ["record-box"],
+      "categories": [
+        "record-box"
+      ],
       "default": true
     },
     {
       "id": "posters",
       "name": "Posters",
-      "categories": ["poster"],
+      "categories": [
+        "poster"
+      ],
       "default": true
     }
   ],
