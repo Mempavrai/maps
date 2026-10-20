@@ -18,9 +18,7 @@ export function useElementCrud() {
   const { showDeleteDialog, deleteTarget, usage, usageLoading, openDelete } =
     useUsageDelete<ElementDefinition>((element) => collectElementUsage(element.id))
 
-  const cascadeCount = computed(
-    () => usage.value.find((entry) => entry.isOpenDocument)?.count ?? 0,
-  )
+  const cascadeCount = computed(() => usage.value.find((entry) => entry.isOpenDocument)?.count ?? 0)
   const cascadeHint = computed(() =>
     cascadeCount.value > 0
       ? `${cascadeCount.value} placement(s) in the open map will be deleted as well.`

@@ -115,12 +115,7 @@ onBeforeUnmount(() => {
           />
         </span>
         <ToolbarSeparator />
-        <Button
-          label="Import"
-          size="small"
-          severity="secondary"
-          @click="showImportDialog = true"
-        />
+        <Button label="Import" size="small" severity="secondary" @click="showImportDialog = true" />
         <span v-tooltip.bottom="needsDocumentHint">
           <Button
             label="Export"
@@ -181,8 +176,8 @@ onBeforeUnmount(() => {
     <ShortcutHelpDialog v-model:visible="showShortcutHelp" />
     <Dialog v-model:visible="showOpenConfirm" modal header="Unsaved changes">
       <p class="confirm-text">
-        The current trial has unsaved changes. It stays in the browser autosave and can be
-        continued from the start dialog — export it first to keep a file.
+        The current trial has unsaved changes. It stays in the browser autosave and can be continued
+        from the start dialog — export it first to keep a file.
       </p>
       <div class="actions">
         <Button label="Cancel" severity="secondary" text @click="showOpenConfirm = false" />

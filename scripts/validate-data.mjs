@@ -148,7 +148,9 @@ for (const entry of mapsIndex.maps) {
     const trialPath = `public/data/${trialDocumentPath(entry.id, trial.id)}`
     if (!existsSync(join(root, trialPath))) {
       if (entry.enabled) {
-        errors.push(`${trialPath}: missing trial file for trial "${trial.id}" of enabled map "${entry.id}"`)
+        errors.push(
+          `${trialPath}: missing trial file for trial "${trial.id}" of enabled map "${entry.id}"`,
+        )
       }
       continue
     }
@@ -160,7 +162,9 @@ for (const entry of mapsIndex.maps) {
       errors.push(`${trialPath}: mapId "${trialDoc.mapId}" does not match map "${entry.id}"`)
     }
     if (trialDoc.trialId !== trial.id) {
-      errors.push(`${trialPath}: trialId "${trialDoc.trialId}" does not match file name "${trial.id}.json"`)
+      errors.push(
+        `${trialPath}: trialId "${trialDoc.trialId}" does not match file name "${trial.id}.json"`,
+      )
     }
     reportIssues(trialPath, collectTrialLogicIssues(trialDoc, library, zones))
     for (const room of trialDoc.rooms) {
@@ -197,7 +201,10 @@ const contributorsPath = `public/data/${CONTRIBUTORS_PATH}`
 const contributors = readJson(contributorsPath)
 if (validateSchema(contributorsPath, validators.contributors, contributors)) {
   const knownMapIds = new Set(mapsIndex.maps.map((entry) => entry.id))
-  reportIssues(contributorsPath, collectContributorIssues(contributors, authorsByMapId, knownMapIds))
+  reportIssues(
+    contributorsPath,
+    collectContributorIssues(contributors, authorsByMapId, knownMapIds),
+  )
   // Missing profiles do not block a PR — they show the maintainer what is still open.
   const credited = new Set(contributors.contributors.map((entry) => entry.name))
   for (const [mapId, authors] of authorsByMapId) {

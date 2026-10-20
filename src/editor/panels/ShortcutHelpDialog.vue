@@ -31,14 +31,20 @@ const groups: Array<{ title: string; entries: Array<{ keys: string[]; action: st
       { keys: ['←↑→↓'], action: 'Pan view (empty selection; Shift: faster)' },
       { keys: ['PgUp', 'PgDn'], action: 'Floor up / down' },
       { keys: ['F'], action: 'Fit view to map' },
-      { keys: ['Ctrl'], action: `Fine grid (${GRID_SNAP_FINE} instead of ${GRID_SNAP_DEFAULT} units)` },
+      {
+        keys: ['Ctrl'],
+        action: `Fine grid (${GRID_SNAP_FINE} instead of ${GRID_SNAP_DEFAULT} units)`,
+      },
     ],
   },
   {
     title: 'Selection',
     entries: [
       { keys: ['Shift', 'Click'], action: 'Add to / remove from selection' },
-      { keys: ['←↑→↓'], action: `Nudge selection by ${NUDGE_STEP} unit (Shift: ${NUDGE_STEP_LARGE})` },
+      {
+        keys: ['←↑→↓'],
+        action: `Nudge selection by ${NUDGE_STEP} unit (Shift: ${NUDGE_STEP_LARGE})`,
+      },
       { keys: ['Ctrl', 'D'], action: 'Duplicate' },
       { keys: ['Ctrl', 'M'], action: 'Merge two selected rooms into one' },
       { keys: ['Del'], action: 'Delete selection' },

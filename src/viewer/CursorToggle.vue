@@ -32,13 +32,7 @@ function onClick(event: MouseEvent) {
     <img src="/images/cursor/cursor_grab.webp" alt="" width="22" height="22" draggable="false" />
   </button>
 
-  <CursorSeverAnimation
-    v-if="anim"
-    :type="anim.type"
-    :x="anim.x"
-    :y="anim.y"
-    @done="anim = null"
-  />
+  <CursorSeverAnimation v-if="anim" :type="anim.type" :x="anim.x" :y="anim.y" @done="anim = null" />
 </template>
 
 <style scoped>

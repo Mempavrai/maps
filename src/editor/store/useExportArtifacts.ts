@@ -112,7 +112,12 @@ export function useExportArtifacts() {
         : null
     const zonesValidator =
       zonesStore.dirty && zonesStore.zoneLibrary ? schemaValidation.getZonesSchemaValidator() : null
-    const result = await validateForExport(manifest, doc, libraryStore.library, zonesStore.zoneLibrary)
+    const result = await validateForExport(
+      manifest,
+      doc,
+      libraryStore.library,
+      zonesStore.zoneLibrary,
+    )
     const issues = [
       ...prefixIssues(MAP_MANIFEST_FILENAME, result.manifest),
       ...prefixIssues(`${doc.trialId}.json`, result.trial),
@@ -133,9 +138,7 @@ export function useExportArtifacts() {
       issues.push(
         ...prefixIssues(
           ZONE_LIBRARY_PATH,
-          schemaIssues.length > 0
-            ? schemaIssues
-            : collectZoneLibraryIssues(zonesStore.zoneLibrary),
+          schemaIssues.length > 0 ? schemaIssues : collectZoneLibraryIssues(zonesStore.zoneLibrary),
         ),
       )
     }

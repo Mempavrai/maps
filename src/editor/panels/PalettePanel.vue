@@ -30,7 +30,12 @@ function pick(elementId: string): void {
 <template>
   <div class="palette">
     <div class="search-wrap">
-      <InputText v-model.trim="search" size="small" class="search-input" placeholder="Search elements…" />
+      <InputText
+        v-model.trim="search"
+        size="small"
+        class="search-input"
+        placeholder="Search elements…"
+      />
       <Button
         v-if="search"
         class="search-clear"

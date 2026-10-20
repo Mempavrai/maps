@@ -74,8 +74,8 @@ async function runImport(): Promise<void> {
       />
       <IssueList v-if="issues.length > 0" :issues="issues" />
       <p v-if="replacesUnsaved" class="replace-warning" role="alert">
-        The open trial has unsaved changes — importing replaces it. The current state stays in
-        the browser autosave.
+        The open trial has unsaved changes — importing replaces it. The current state stays in the
+        browser autosave.
       </p>
       <div class="actions">
         <Button label="Cancel" severity="secondary" text @click="visible = false" />

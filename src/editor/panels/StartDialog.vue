@@ -84,13 +84,7 @@ async function pickMap(mapId: string): Promise<void> {
 </script>
 
 <template>
-  <Dialog
-    :visible="visible"
-    modal
-    :closable="false"
-    :draggable="false"
-    header="Map Editor"
-  >
+  <Dialog :visible="visible" modal :closable="false" :draggable="false" header="Map Editor">
     <p v-if="loadError" class="error" role="alert">{{ loadError }}</p>
 
     <div v-if="mode === 'menu'" class="menu">

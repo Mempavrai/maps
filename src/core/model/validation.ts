@@ -166,7 +166,12 @@ function collectWallGapIssues(room: Room, roomPath: string): ValidationIssue[] {
 
 export function collectManifestIssues(manifest: MapManifest): ValidationIssue[] {
   const issues: ValidationIssue[] = []
-  checkUniqueIds(issues, 'trials', 'trial', manifest.trials.map((trial) => trial.id))
+  checkUniqueIds(
+    issues,
+    'trials',
+    'trial',
+    manifest.trials.map((trial) => trial.id),
+  )
   const defaultCount = manifest.trials.filter((trial) => trial.default).length
   if (defaultCount !== 1) {
     issues.push({

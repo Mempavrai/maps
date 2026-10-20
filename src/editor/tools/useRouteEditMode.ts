@@ -90,7 +90,10 @@ export function useRouteEditMode() {
       if (event.event.altKey) {
         if (points.length > MIN_OPEN_PATH_POINTS) {
           store.commitOn('route', routeId, (route) =>
-            writePoints(route, points.filter((_, index) => index !== vertex)),
+            writePoints(
+              route,
+              points.filter((_, index) => index !== vertex),
+            ),
           )
         }
         activeIndex.value = null

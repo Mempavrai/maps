@@ -239,9 +239,7 @@ export interface RouteLine {
  * `multipleOf`) or an open absolute path.
  */
 export type MapShapeGeometry =
-  | { pos: Vec2; radius: number }
-  | { pos: Vec2; size: Vec2; rotation?: number }
-  | { path: string }
+  { pos: Vec2; radius: number } | { pos: Vec2; size: Vec2; rotation?: number } | { path: string }
 
 export type MapShape = {
   id: string

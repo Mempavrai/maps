@@ -13,8 +13,7 @@ export function useWorkingCopy<T>(load: () => Promise<T>, errorLabel: string) {
 
   const dirty = computed(
     () =>
-      original.value !== null &&
-      JSON.stringify(working.value) !== JSON.stringify(original.value),
+      original.value !== null && JSON.stringify(working.value) !== JSON.stringify(original.value),
   )
 
   async function loadOriginal(): Promise<void> {

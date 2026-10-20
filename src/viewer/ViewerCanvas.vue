@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import {
-  LONG_PRESS_MOVE_TOLERANCE_PX,
-  LONG_PRESS_MS,
-  TOOLTIP_OFFSET_PX,
-} from '../core/constants'
+import { LONG_PRESS_MOVE_TOLERANCE_PX, LONG_PRESS_MS, TOOLTIP_OFFSET_PX } from '../core/constants'
 import { hitFromEventTarget, type HitTarget } from '../core/interaction/hitTest'
 import { usePanZoom } from '../core/interaction/usePanZoom'
 import { roomCameras } from '../core/model/roomCameras'
@@ -38,9 +34,7 @@ watch(
   { flush: 'post' },
 )
 
-const selectedIds = computed(
-  () => new Set(viewer.selectedRoomId ? [viewer.selectedRoomId] : []),
-)
+const selectedIds = computed(() => new Set(viewer.selectedRoomId ? [viewer.selectedRoomId] : []))
 
 const cameraMarkers = computed(() => roomCameras(viewer.selectedRoom, viewer.activeFloor))
 

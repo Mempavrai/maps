@@ -97,10 +97,7 @@ export function useSelectTool(): EditorTool {
       return
     }
     marquee.value = null
-    const screenDistance = distance(
-      [event.event.clientX, event.event.clientY],
-      state.screenFrom,
-    )
+    const screenDistance = distance([event.event.clientX, event.event.clientY], state.screenFrom)
     if (screenDistance < MARQUEE_MIN_DRAG_PX) {
       if (!state.additive) {
         store.clearSelection()

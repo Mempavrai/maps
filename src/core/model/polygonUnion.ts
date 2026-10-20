@@ -14,8 +14,7 @@ import { edgeLength, edgeSegments } from './wallGaps'
 export type PolygonUnionFailure = 'disjoint' | 'corner-touch' | 'hole' | 'degenerate'
 
 export type PolygonUnionResult =
-  | { ok: true; points: Vec2[] }
-  | { ok: false; reason: PolygonUnionFailure }
+  { ok: true; points: Vec2[] } | { ok: false; reason: PolygonUnionFailure }
 
 type Edge = [Vec2, Vec2]
 
@@ -62,7 +61,11 @@ function toRing(points: Vec2[]): Vec2[] | null {
 /** Even-odd ray casting; only ever called with probes that are off the boundary. */
 function containsPoint(ring: Vec2[], [x, y]: Vec2): boolean {
   let inside = false
-  for (let index = 0, previous = ring.length - 1; index < ring.length; previous = index, index += 1) {
+  for (
+    let index = 0, previous = ring.length - 1;
+    index < ring.length;
+    previous = index, index += 1
+  ) {
     const [xi, yi] = ring[index]
     const [xj, yj] = ring[previous]
     if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) {
@@ -209,7 +212,11 @@ function withoutCollinear(points: Vec2[]): Vec2[] {
 
 function signedArea(ring: Vec2[]): number {
   let sum = 0
-  for (let index = 0, previous = ring.length - 1; index < ring.length; previous = index, index += 1) {
+  for (
+    let index = 0, previous = ring.length - 1;
+    index < ring.length;
+    previous = index, index += 1
+  ) {
     sum += (ring[previous][0] - ring[index][0]) * (ring[previous][1] + ring[index][1])
   }
   return sum / 2

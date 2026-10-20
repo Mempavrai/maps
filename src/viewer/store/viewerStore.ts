@@ -155,7 +155,10 @@ export const useViewerStore = defineStore('viewer', () => {
       disabledFilterIds.value = new Set(
         [...disabledFilterIds.value].filter((id) => filterIds.has(id)),
       )
-      if (selectedRoomId.value && !document.rooms.some((room) => room.id === selectedRoomId.value)) {
+      if (
+        selectedRoomId.value &&
+        !document.rooms.some((room) => room.id === selectedRoomId.value)
+      ) {
         selectedRoomId.value = null
       }
       warnAboutLogicIssues(document, library.value, zones.value)
@@ -197,9 +200,7 @@ export const useViewerStore = defineStore('viewer', () => {
     loadedZones: ZoneLibrary | null,
   ): void {
     for (const issue of collectTrialLogicIssues(document, loadedLibrary, loadedZones)) {
-      console.warn(
-        `trial "${document.mapId}/${document.trialId}": ${issue.path}: ${issue.message}`,
-      )
+      console.warn(`trial "${document.mapId}/${document.trialId}": ${issue.path}: ${issue.message}`)
     }
   }
 

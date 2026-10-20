@@ -1,7 +1,14 @@
 import type { HitTarget } from '../../core/interaction/hitTest'
 import { absolutePathStart, pointsBounds, roomWorldPoints } from '../../core/model/roomPath'
 import { isLineShape, shapeWorldPoints } from '../../core/model/shapes'
-import type { MapShape, Placement, Room, RouteLine, TrialDocument, Vec2 } from '../../core/model/types'
+import type {
+  MapShape,
+  Placement,
+  Room,
+  RouteLine,
+  TrialDocument,
+  Vec2,
+} from '../../core/model/types'
 
 export const CLIPBOARD_FORMAT = 'outlasttrials-maps/clipboard'
 export const CLIPBOARD_PAYLOAD_VERSION = 2

@@ -9,13 +9,18 @@ import {
 } from './roomPath'
 import type { RoomGeometry } from './roomScale'
 import type { InnerLine, Room, Vec2, WallGap } from './types'
-import { clampWallGaps, distanceToEdge, edgeSegments, gapEndpoints, projectOnEdge } from './wallGaps'
+import {
+  clampWallGaps,
+  distanceToEdge,
+  edgeSegments,
+  gapEndpoints,
+  projectOnEdge,
+} from './wallGaps'
 
 export type RoomMergeFailure = 'different-floors' | 'unsupported-path' | PolygonUnionFailure
 
 export type RoomMergeResult =
-  | { ok: true; geometry: RoomGeometry }
-  | { ok: false; reason: RoomMergeFailure }
+  { ok: true; geometry: RoomGeometry } | { ok: false; reason: RoomMergeFailure }
 
 interface ParsedRoom {
   room: Room

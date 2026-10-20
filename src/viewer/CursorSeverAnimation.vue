@@ -34,12 +34,7 @@ const drops = Array.from({ length: DROP_COUNT }, (_, index) => {
       <!-- The hand runs longest, so its end closes the whole animation. -->
       <div class="cursor-anim__hand" @animationend="emit('done')" />
       <div class="cursor-anim__stump" />
-      <span
-        v-for="(style, index) in drops"
-        :key="index"
-        class="cursor-anim__drop"
-        :style="style"
-      />
+      <span v-for="(style, index) in drops" :key="index" class="cursor-anim__drop" :style="style" />
     </div>
   </Teleport>
 </template>

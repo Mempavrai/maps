@@ -48,8 +48,7 @@ function confirm(): void {
           <tbody>
             <tr v-for="entry in usage" :key="`${entry.mapId}/${entry.trialId}`">
               <td>
-                {{ entry.mapName }} / {{ entry.trialId
-                }}{{ entry.isOpenDocument ? ' (open)' : '' }}
+                {{ entry.mapName }} / {{ entry.trialId }}{{ entry.isOpenDocument ? ' (open)' : '' }}
               </td>
               <td class="count">{{ entry.count }}</td>
             </tr>

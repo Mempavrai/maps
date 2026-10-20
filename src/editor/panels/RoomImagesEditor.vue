@@ -128,8 +128,8 @@ function isPicking(index: number): boolean {
       />
     </div>
     <p class="hint">
-      Image files are added to the repository in the pull request; external links work right away and
-      are replaced before merging.
+      Image files are added to the repository in the pull request; external links work right away
+      and are replaced before merging.
     </p>
   </fieldset>
 </template>

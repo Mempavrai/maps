@@ -160,7 +160,9 @@ function save(): void {
         <Textarea v-model="description" auto-resize rows="2" />
       </label>
       <label class="field">
-        <span class="field-label">Icon file name (game-assets, without .webp — empty = placeholder)</span>
+        <span class="field-label"
+          >Icon file name (game-assets, without .webp — empty = placeholder)</span
+        >
         <InputText v-model.trim="iconFile" size="small" placeholder="objectif_key" />
         <small v-if="!iconValid" class="field-error">{{ ICON_FILE_ERROR }}</small>
         <img v-if="iconPreview" :src="iconPreview" alt="" class="icon-preview" />

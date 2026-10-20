@@ -12,8 +12,7 @@ const TOKEN_RE = /[A-Za-z]|-?(?:\d*\.\d+|\d+)(?:[eE][+-]?\d+)?/g
 const CHARSET_RE = /^[MmLlHhVvZz0-9eE+,.\s-]*$/
 
 /** Path numbers are rounded to 3 decimals so emitted `d` strings stay compact. */
-export const formatPathNumber = (value: number): string =>
-  String(Math.round(value * 1000) / 1000)
+export const formatPathNumber = (value: number): string => String(Math.round(value * 1000) / 1000)
 
 const LINETO = {
   L: ([x, y]: number[], current: Vec2, absolute: boolean): Vec2 =>

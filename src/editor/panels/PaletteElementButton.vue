@@ -26,13 +26,7 @@ function shapePreviewPath(element: ElementDefinition): string {
 <template>
   <div class="element-row" :class="{ active }">
     <button type="button" class="element" @click="emit('pick')">
-      <img
-        v-if="showIcon"
-        :src="iconUrl"
-        alt=""
-        class="icon-preview"
-        @error="onIconError"
-      />
+      <img v-if="showIcon" :src="iconUrl" alt="" class="icon-preview" @error="onIconError" />
       <svg v-else-if="element.render" class="shape-preview" viewBox="-11 -6 22 12">
         <path :d="shapePreviewPath(element)" :fill="element.color" />
       </svg>
