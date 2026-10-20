@@ -67,8 +67,9 @@ function shapePreviewPath(element: ElementDefinition): string {
 }
 
 .element-row.active {
-  border-color: var(--color-selection);
-  background: var(--color-selection-soft);
+  border-color: var(--border-selected);
+  background: var(--surface-selected);
+  box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .element {

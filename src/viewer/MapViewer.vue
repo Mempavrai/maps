@@ -180,7 +180,7 @@ const title = computed(() => viewer.manifest?.meta.name ?? String(route.params.m
   flex-shrink: 0;
   overflow-y: auto;
   padding: 16px;
-  background: var(--surface-panel);
+  background: var(--surface-drawer);
   border-left: 1px solid var(--border-default);
 }
 </style>

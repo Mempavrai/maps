@@ -209,7 +209,7 @@ onBeforeUnmount(() => {
   width: 240px;
   flex-shrink: 0;
   overflow-y: auto;
-  background: var(--surface-panel);
+  background: var(--surface-drawer);
   padding: 8px;
 }
 

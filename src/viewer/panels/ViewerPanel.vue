@@ -160,7 +160,9 @@ function imageUrl(src: string): string {
 }
 
 .floor-entry.active {
-  background: var(--surface-active);
+  background: var(--surface-selected);
+  box-shadow: inset 3px 0 0 var(--accent);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -170,6 +172,10 @@ function imageUrl(src: string): string {
   gap: 8px;
   padding: 3px 0;
   cursor: pointer;
+}
+
+.filter-row :deep(.p-checkbox-box) {
+  border-radius: var(--radius-pill);
 }
 
 .room-title {

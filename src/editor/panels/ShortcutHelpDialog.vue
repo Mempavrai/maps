@@ -116,10 +116,10 @@ const groups: Array<{ title: string; entries: Array<{ keys: string[]; action: st
 
 h3 {
   margin: 0 0 6px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--text-faint);
+  font-family: var(--font-brand);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-body);
 }
 
 ul {

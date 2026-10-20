@@ -39,9 +39,8 @@ const emit = defineEmits<{
 
 .group-name {
   margin: 4px 0 2px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--text-faint);
+  font-family: var(--font-brand);
+  font-size: 13px;
+  color: var(--text-body);
 }
 </style>
