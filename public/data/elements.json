@@ -307,7 +307,10 @@
       "propsSchema": {
         "direction": {
           "type": "enum",
-          "values": ["up", "down"],
+          "values": [
+            "up",
+            "down"
+          ],
           "label": "Direction"
         },
         "targetFloor": {
