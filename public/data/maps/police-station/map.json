@@ -3,12 +3,13 @@
   "id": "police-station",
   "meta": {
     "name": "Police Station",
-    "authors": ["joeyblack183", "BustEdits", "KingOfMiners"]
+    "authors": ["joeyblack183", "BustEdits", "KingOfMiners", "Fwenn"]
   },
   "trials": [
     {
       "id": "kill-the-snitch",
-      "name": "Kill the Snitch"
+      "name": "Kill the Snitch",
+      "default": true
     },
     {
       "id": "cancel-the-autopsy",
@@ -28,8 +29,7 @@
     },
     {
       "id": "eliminate-the-past",
-      "name": "Eliminate the Past",
-      "default": true
+      "name": "Eliminate the Past"
     }
   ]
 }

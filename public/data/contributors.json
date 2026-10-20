@@ -30,6 +30,12 @@
       "profileId": "041dd966-9a54-1512-2e71-31b18d289404",
       "profileUrl": "https://outlasttrialsstats.com/@kingofminers",
       "maps": ["police-station"]
+    },
+    {
+      "name": "Fwenn",
+      "profileId": "31e121a4-2fcc-770b-0c57-314b57e416e0",
+      "profileUrl": "https://outlasttrialsstats.com/@fwenn",
+      "maps": ["police-station"]
     }
   ]
 }
