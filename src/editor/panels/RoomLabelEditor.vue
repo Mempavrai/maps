@@ -99,9 +99,3 @@ function setLabelValue(patch: { pos?: Vec2; fontSize?: number | null }, coalesce
     </label>
   </div>
 </template>
-
-<style scoped>
-.field-row .field {
-  flex: 1 1 0;
-}
-</style>

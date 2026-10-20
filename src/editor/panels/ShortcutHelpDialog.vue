@@ -7,19 +7,14 @@ import {
   NUDGE_STEP_LARGE,
   ROTATION_STEP_DEG,
 } from '../../core/constants'
+import { TOOLS } from '../toolCatalog'
 
 const visible = defineModel<boolean>('visible', { required: true })
 
 const groups: Array<{ title: string; entries: Array<{ keys: string[]; action: string }> }> = [
   {
     title: 'Tools',
-    entries: [
-      { keys: ['1'], action: 'Select tool' },
-      { keys: ['2'], action: 'Room tool' },
-      { keys: ['3'], action: 'Element tool' },
-      { keys: ['4'], action: 'Route tool' },
-      { keys: ['5'], action: 'Shape tool' },
-    ],
+    entries: TOOLS.map((tool) => ({ keys: [tool.hotkey], action: `${tool.label} tool` })),
   },
   {
     title: 'View',

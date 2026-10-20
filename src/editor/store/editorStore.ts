@@ -1,6 +1,11 @@
 import { defineStore } from 'pinia'
 import { computed, ref, shallowRef } from 'vue'
-import { AUTOSAVE_DEBOUNCE_MS, UNDO_COALESCE_MS, UNDO_STACK_LIMIT } from '../../core/constants'
+import {
+  AUTOSAVE_DEBOUNCE_MS,
+  EDITOR_HINTS_STORAGE_KEY,
+  UNDO_COALESCE_MS,
+  UNDO_STACK_LIMIT,
+} from '../../core/constants'
 import type { EntityKind, HitTarget } from '../../core/interaction/hitTest'
 import type {
   ElementLibrary,
@@ -14,6 +19,7 @@ import type {
   ZoneLibrary,
 } from '../../core/model/types'
 import { initialFloorIndex } from '../../core/model/mapDefaults'
+import { storedFlag } from '../../core/storage/storedFlag'
 import type { RoomToolMode, ShapeToolMode, ToolId } from '../tools/toolTypes'
 import { saveAutosave, type AutosavePayload, type WorkspaceSnapshot } from './documentIO'
 import { jsonClone } from './jsonClone'
@@ -57,6 +63,7 @@ export const useEditorStore = defineStore('editor', () => {
   const innerLineStyle = ref<InnerLineStyle>('object')
   const shapeToolMode = ref<ShapeToolMode>('rect')
   const drawingHistory = shallowRef<TransientHistory | null>(null)
+  const hintsVisible = storedFlag(EDITOR_HINTS_STORAGE_KEY, true)
   /** Short tool hint for the status bar (e.g. a path that cannot be edited). */
   const toolHint = ref('')
   const activeFloor = ref(0)
@@ -475,6 +482,7 @@ export const useEditorStore = defineStore('editor', () => {
     innerLineStyle,
     shapeToolMode,
     drawingHistory,
+    hintsVisible,
     toolHint,
     activeFloor,
     activeElementId,

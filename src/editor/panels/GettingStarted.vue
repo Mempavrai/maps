@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
+import PropertiesHeader from './PropertiesHeader.vue'
 
 const emit = defineEmits<{ help: [] }>()
 
@@ -25,7 +26,7 @@ const steps = [
 
 <template>
   <section class="getting-started">
-    <h3 class="heading">Getting started</h3>
+    <PropertiesHeader kind="New here?" title="Getting started" />
     <ol class="steps">
       <li v-for="step in steps" :key="step.title" class="step">
         <span class="step-title">{{ step.title }}</span>
@@ -48,22 +49,13 @@ const steps = [
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
-}
-
-.heading {
-  margin: 0;
-  font-family: var(--font-brand);
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--text-primary);
 }
 
 .steps {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin: 0;
+  margin: 0 0 12px;
   padding: 0;
   list-style: none;
   counter-reset: step;

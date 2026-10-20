@@ -13,18 +13,15 @@ import { snapToGrid } from '../../core/interaction/snapping'
 import { screenToWorld, type ViewTransform } from '../../core/interaction/viewTransform'
 import type { Vec2 } from '../../core/model/types'
 import { useEditorStore } from '../store/editorStore'
+import { TOOLS } from '../toolCatalog'
 import type { CanvasPointerEvent, EditorTool, ToolId, ToolOverlay } from './toolTypes'
 import { useCameraPickMode } from './useCameraPickMode'
 import { useClipboard } from './useClipboard'
 import { useMergeRooms } from './useMergeRooms'
 
-const TOOL_HOTKEYS: Record<string, ToolId> = {
-  '1': 'select',
-  '2': 'room',
-  '3': 'placement',
-  '4': 'route',
-  '5': 'shape',
-}
+const TOOL_HOTKEYS: Record<string, ToolId> = Object.fromEntries(
+  TOOLS.map((tool) => [tool.hotkey, tool.id]),
+)
 
 /**
  * Translates raw pointer/keyboard events into tool calls: coordinates in world

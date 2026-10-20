@@ -31,7 +31,9 @@ function pick(elementId: string): void {
   <div class="palette">
     <div class="palette-head">
       <h2 class="panel-heading">Elements</h2>
-      <p class="intro">Pick an element, then click the map to place it.</p>
+      <p v-if="store.hintsVisible" class="intro">
+        Pick an element, then click the map to place it.
+      </p>
       <div class="search-wrap">
         <InputText
           v-model.trim="search"
@@ -87,9 +89,9 @@ function pick(elementId: string): void {
 .palette-head {
   position: sticky;
   z-index: 1;
-  top: -12px;
-  margin: -12px -12px 0;
-  padding: 12px 12px 10px;
+  top: calc(-1 * var(--side-panel-padding));
+  margin: calc(-1 * var(--side-panel-padding)) calc(-1 * var(--side-panel-padding)) 0;
+  padding: var(--side-panel-padding) var(--side-panel-padding) 10px;
   border-bottom: 1px solid var(--border-default);
   background: var(--surface-drawer);
 }

@@ -7,17 +7,34 @@ import { ROOM_MODES, SHAPE_MODES, TOOLS } from './toolCatalog'
 
 const store = useEditorStore()
 
-const activeTool = computed(() => TOOLS.find((tool) => tool.id === store.activeTool))
-
-const activeModeHint = computed(() => {
+const modes = computed(() => {
   if (store.activeTool === 'room') {
-    return ROOM_MODES.find((mode) => mode.id === store.roomToolMode)?.hint
+    return ROOM_MODES.map((mode) => ({
+      ...mode,
+      active: store.roomToolMode === mode.id,
+      select: () => (store.roomToolMode = mode.id),
+    }))
   }
   if (store.activeTool === 'shape') {
-    return SHAPE_MODES.find((mode) => mode.id === store.shapeToolMode)?.hint
+    return SHAPE_MODES.map((mode) => ({
+      ...mode,
+      active: store.shapeToolMode === mode.id,
+      select: () => (store.shapeToolMode = mode.id),
+    }))
   }
-  return activeTool.value?.hint
+  return []
 })
+
+const hint = computed(
+  () =>
+    store.toolHint ||
+    (store.hintsVisible
+      ? (
+          modes.value.find((mode) => mode.active) ??
+          TOOLS.find((tool) => tool.id === store.activeTool)
+        )?.hint
+      : undefined),
+)
 </script>
 
 <template>
@@ -38,20 +55,21 @@ const activeModeHint = computed(() => {
       </button>
     </div>
 
-    <div v-if="store.activeTool === 'room'" class="modes" role="toolbar" aria-label="Room mode">
+    <div v-if="modes.length > 0" class="modes" role="toolbar" aria-label="Tool mode">
       <button
-        v-for="mode in ROOM_MODES"
+        v-for="mode in modes"
         :key="mode.id"
+        v-tooltip.bottom="mode.hint"
         type="button"
         class="segment compact"
-        :aria-pressed="store.roomToolMode === mode.id"
-        @click="store.roomToolMode = mode.id"
+        :aria-pressed="mode.active"
+        @click="mode.select()"
       >
         <i :class="mode.icon" aria-hidden="true" />
         <span>{{ mode.label }}</span>
       </button>
       <button
-        v-if="store.roomToolMode === 'polygon'"
+        v-if="store.activeTool === 'room' && store.roomToolMode === 'polygon'"
         v-tooltip.bottom="'Snap to right angles — hold Alt to invert temporarily'"
         type="button"
         class="segment compact"
@@ -61,7 +79,7 @@ const activeModeHint = computed(() => {
         90°
       </button>
       <Select
-        v-if="store.roomToolMode === 'innerline'"
+        v-if="store.activeTool === 'room' && store.roomToolMode === 'innerline'"
         v-model="store.innerLineStyle"
         :options="INNER_LINE_STYLE_OPTIONS"
         option-label="label"
@@ -71,23 +89,8 @@ const activeModeHint = computed(() => {
       />
     </div>
 
-    <div v-if="store.activeTool === 'shape'" class="modes" role="toolbar" aria-label="Shape kind">
-      <button
-        v-for="mode in SHAPE_MODES"
-        :key="mode.id"
-        type="button"
-        class="segment compact"
-        :aria-pressed="store.shapeToolMode === mode.id"
-        @click="store.shapeToolMode = mode.id"
-      >
-        <i :class="mode.icon" aria-hidden="true" />
-        <span>{{ mode.label }}</span>
-      </button>
-    </div>
-
-    <p class="hint" aria-live="polite" :title="store.toolHint || activeModeHint">
-      <span v-if="store.toolHint" class="live-hint">{{ store.toolHint }}</span>
-      <span v-else>{{ activeModeHint }}</span>
+    <p class="hint" :class="{ live: store.toolHint }" aria-live="polite" :title="hint">
+      {{ hint }}
     </p>
   </div>
 </template>
@@ -179,7 +182,7 @@ kbd {
   white-space: nowrap;
 }
 
-.live-hint {
+.hint.live {
   color: var(--text-strong);
 }
 </style>

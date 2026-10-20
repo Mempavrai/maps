@@ -4,7 +4,7 @@ interface ToolEntry<Id extends string> {
   id: Id
   label: string
   icon: string
-  hint: string
+  hint?: string
 }
 
 export const TOOLS: Array<ToolEntry<ToolId> & { hotkey: string }> = [
@@ -15,14 +15,8 @@ export const TOOLS: Array<ToolEntry<ToolId> & { hotkey: string }> = [
     hotkey: '1',
     hint: 'Click to select and drag to move. Shift+click adds, dragging on empty space draws a box.',
   },
-  { id: 'room', label: 'Room', icon: 'pi pi-home', hotkey: '2', hint: '' },
-  {
-    id: 'placement',
-    label: 'Element',
-    icon: 'pi pi-map-marker',
-    hotkey: '3',
-    hint: 'Click the map to place the element picked on the left.',
-  },
+  { id: 'room', label: 'Room', icon: 'pi pi-home', hotkey: '2' },
+  { id: 'placement', label: 'Element', icon: 'pi pi-map-marker', hotkey: '3' },
   {
     id: 'route',
     label: 'Route',
@@ -30,7 +24,7 @@ export const TOOLS: Array<ToolEntry<ToolId> & { hotkey: string }> = [
     hotkey: '4',
     hint: 'Click to add points — Enter or double-click finishes the route.',
   },
-  { id: 'shape', label: 'Shape', icon: 'pi pi-pencil', hotkey: '5', hint: '' },
+  { id: 'shape', label: 'Shape', icon: 'pi pi-pencil', hotkey: '5' },
 ]
 
 export const ROOM_MODES: Array<ToolEntry<RoomToolMode>> = [
@@ -56,7 +50,7 @@ export const ROOM_MODES: Array<ToolEntry<RoomToolMode>> = [
     id: 'wallgap',
     label: 'Wall gap',
     icon: 'pi pi-minus-circle',
-    hint: 'Click an edge of a room to cut an opening into its wall.',
+    hint: 'Click a room, then one of its edges to cut an opening into its wall.',
   },
 ]
 

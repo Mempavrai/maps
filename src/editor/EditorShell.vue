@@ -97,7 +97,7 @@ onBeforeUnmount(() => {
       <div class="canvas-wrap">
         <EditorCanvas ref="canvasRef" />
         <ControlsLegend
-          v-if="editor.document"
+          v-if="editor.document && editor.hintsVisible"
           class="canvas-legend"
           :hints="[
             { icon: 'left', label: 'Use tool' },
@@ -160,10 +160,10 @@ onBeforeUnmount(() => {
 .side-panel {
   width: 248px;
   flex-shrink: 0;
-  overflow-x: hidden;
   overflow-y: auto;
+  --side-panel-padding: 12px;
   background: var(--surface-drawer);
-  padding: 12px;
+  padding: var(--side-panel-padding);
 }
 
 .palette {

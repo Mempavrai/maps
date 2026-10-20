@@ -215,9 +215,3 @@ function setFloor(floor: number): void {
     </PanelSection>
   </div>
 </template>
-
-<style scoped>
-.field-row .field {
-  flex: 1 1 0;
-}
-</style>

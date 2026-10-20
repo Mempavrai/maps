@@ -59,6 +59,7 @@ export const EDITOR_AUTOSAVE_KEY = 'outlasttrials-maps:editor-autosave'
 export const EDITOR_AUTOSAVE_VERSION = 4
 
 export const CURSOR_STORAGE_KEY = 'outlasttrials-maps:custom-cursor'
+export const EDITOR_HINTS_STORAGE_KEY = 'outlasttrials-maps:editor-hints'
 /** The custom cursor image points slightly left of its top-left corner. */
 export const CURSOR_HOTSPOT_OFFSET_PX = 2
 export const AUTOSAVE_DEBOUNCE_MS = 1000

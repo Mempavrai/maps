@@ -31,6 +31,16 @@ function paste(): void {
       <span v-if="store.selection.length > 1" class="selection-count">
         {{ store.selection.length }} objects selected
       </span>
+      <Button
+        v-tooltip.bottom="'Paste (Ctrl+V)'"
+        icon="pi pi-clipboard"
+        aria-label="Paste"
+        size="small"
+        text
+        severity="secondary"
+        :disabled="!canPaste"
+        @click="paste()"
+      />
       <template v-if="hasSelection">
         <Button
           v-tooltip.bottom="'Copy (Ctrl+C)'"
@@ -57,18 +67,6 @@ function paste(): void {
             </svg>
           </template>
         </Button>
-      </template>
-      <Button
-        v-tooltip.bottom="'Paste (Ctrl+V)'"
-        icon="pi pi-clipboard"
-        aria-label="Paste"
-        size="small"
-        text
-        severity="secondary"
-        :disabled="!canPaste"
-        @click="paste()"
-      />
-      <template v-if="hasSelection">
         <Button
           v-if="canMerge"
           v-tooltip.bottom="'Merge rooms (Ctrl+M)'"
@@ -105,11 +103,30 @@ function paste(): void {
         />
       </template>
     </div>
-    <RoomProperties v-if="store.selectedRoom" :room="store.selectedRoom" />
-    <PlacementProperties v-else-if="store.selectedPlacement" :placement="store.selectedPlacement" />
-    <RouteProperties v-else-if="store.selectedRoute" :route="store.selectedRoute" />
-    <ShapeProperties v-else-if="store.selectedShape" :shape="store.selectedShape" />
-    <GettingStarted v-else-if="!hasSelection" @help="emit('help')" />
+    <RoomProperties
+      v-if="store.selectedRoom"
+      :key="store.selectedRoom.id"
+      :room="store.selectedRoom"
+    />
+    <PlacementProperties
+      v-else-if="store.selectedPlacement"
+      :key="store.selectedPlacement.id"
+      :placement="store.selectedPlacement"
+    />
+    <RouteProperties
+      v-else-if="store.selectedRoute"
+      :key="store.selectedRoute.id"
+      :route="store.selectedRoute"
+    />
+    <ShapeProperties
+      v-else-if="store.selectedShape"
+      :key="store.selectedShape.id"
+      :shape="store.selectedShape"
+    />
+    <template v-else-if="!hasSelection">
+      <GettingStarted v-if="store.hintsVisible" @help="emit('help')" />
+      <p v-else class="field-hint">Nothing selected.</p>
+    </template>
   </div>
 </template>
 

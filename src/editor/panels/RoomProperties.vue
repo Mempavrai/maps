@@ -199,9 +199,3 @@ function toggleFlag(flag: RoomFlag, checked: boolean): void {
     </PanelSection>
   </div>
 </template>
-
-<style scoped>
-.field-row .field {
-  flex: 1 1 0;
-}
-</style>

@@ -54,7 +54,7 @@ const fileItems = computed<MenuItem[]>(() => [
     <span v-else class="map-name">Map Editor</span>
 
     <label v-if="store.document" class="floor">
-      <span class="floor-label">Floor</span>
+      <span class="field-label">Floor</span>
       <Select
         v-model="store.activeFloor"
         :options="store.floorOptions"
@@ -98,6 +98,16 @@ const fileItems = computed<MenuItem[]>(() => [
         @click="fileMenu?.toggle($event)"
       />
       <Menu ref="fileMenu" :model="fileItems" popup />
+      <Button
+        v-tooltip.bottom="store.hintsVisible ? 'Hide hints' : 'Show hints'"
+        icon="pi pi-lightbulb"
+        aria-label="Hints"
+        :aria-pressed="store.hintsVisible"
+        size="small"
+        text
+        :severity="store.hintsVisible ? 'contrast' : 'secondary'"
+        @click="store.hintsVisible = !store.hintsVisible"
+      />
       <Button
         v-tooltip.bottom="'Keyboard shortcuts (?)'"
         icon="pi pi-question-circle"
@@ -168,11 +178,6 @@ const fileItems = computed<MenuItem[]>(() => [
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.floor-label {
-  font-size: 12px;
-  color: var(--text-muted);
 }
 
 .floor-select {

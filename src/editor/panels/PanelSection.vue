@@ -4,21 +4,22 @@ import { ref } from 'vue'
 const props = defineProps<{ title: string; count?: number; open?: boolean }>()
 
 // `open` is only the initial state — a section must not collapse while its content is edited.
-const isOpen = ref(props.open)
+const initiallyOpen = props.open
+const rendered = ref(initiallyOpen)
 
 function onToggle(event: Event): void {
-  isOpen.value = (event.target as HTMLDetailsElement).open
+  rendered.value ||= (event.target as HTMLDetailsElement).open
 }
 </script>
 
 <template>
-  <details class="panel-section" :open="isOpen" @toggle="onToggle">
+  <details class="panel-section" :open="initiallyOpen" @toggle="onToggle">
     <summary class="section-summary">
       <i class="pi pi-chevron-right section-chevron" aria-hidden="true" />
       <span class="section-title">{{ title }}</span>
       <span v-if="count" class="section-count">{{ count }}</span>
     </summary>
-    <div class="section-body">
+    <div v-if="rendered" class="section-body">
       <slot />
     </div>
   </details>
