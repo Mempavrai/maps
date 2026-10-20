@@ -1,5 +1,6 @@
 import { EDITOR_AUTOSAVE_KEY, EDITOR_AUTOSAVE_VERSION } from '../../core/constants'
 import { loadMapManifest } from '../../core/model/dataSource'
+import { serializeJson } from '../../core/model/jsonFormat'
 import type {
   ElementLibrary,
   MapManifest,
@@ -197,11 +198,6 @@ export async function importDocument(
   }
   ensureTrialInManifest(manifest, documentData.trialId)
   return { workspace: { manifest, document: documentData }, issues: [] }
-}
-
-/** Canonical export format: 2 spaces + trailing newline. */
-export function serializeJson(data: unknown): string {
-  return `${JSON.stringify(data, null, 2)}\n`
 }
 
 export function downloadJson(filename: string, data: unknown): void {

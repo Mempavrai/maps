@@ -6,8 +6,7 @@
  * Runs locally (pnpm validate:data) and in CI.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
-import { dirname, extname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { extname, join } from 'node:path'
 import Ajv from 'ajv'
 import {
   CONTRIBUTORS_PATH,
@@ -19,6 +18,7 @@ import {
   trialDocumentPath,
   trialsDirPath,
 } from '../src/core/model/dataPaths.ts'
+import { serializeJson } from '../src/core/model/jsonFormat.ts'
 import {
   collectContributorIssues,
   collectLibraryIssues,
@@ -27,8 +27,8 @@ import {
   collectTrialLogicIssues,
   collectZoneLibraryIssues,
 } from '../src/core/model/validation.ts'
+import { listDataJsonFiles, root } from './dataFiles.mjs'
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const readJson = (relPath) => JSON.parse(readFileSync(join(root, relPath), 'utf8'))
 
 // Image limits from docs/05 §3.3.
@@ -79,6 +79,21 @@ function validateSchema(relPath, validate, data) {
 function reportIssues(relPath, issues) {
   for (const issue of issues) {
     errors.push(`${relPath}: ${issue.path ? `${issue.path}: ` : ''}${issue.message}`)
+  }
+}
+
+// Editor exports are already canonical; this catches hand edits and foreign formatters.
+for (const relPath of listDataJsonFiles()) {
+  const text = readFileSync(join(root, relPath), 'utf8')
+  let data
+  try {
+    data = JSON.parse(text)
+  } catch (err) {
+    errors.push(`${relPath}: invalid JSON (${err.message})`)
+    continue
+  }
+  if (text !== serializeJson(data)) {
+    errors.push(`${relPath}: not in the editor export format — run pnpm format`)
   }
 }
 
