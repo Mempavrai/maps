@@ -40,7 +40,8 @@ a {
    as long as html carries the .custom-cursor-active class (useCustomCursor). */
 html.custom-cursor-active *,
 html.custom-cursor-active *::before,
-html.custom-cursor-active *::after {
+html.custom-cursor-active *::after,
+html.custom-cursor-active totstats-profile::part(card) {
   cursor: none !important;
 }
 
