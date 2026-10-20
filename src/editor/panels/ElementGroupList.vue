@@ -34,11 +34,11 @@ const emit = defineEmits<{
 .group {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .group-name {
-  margin: 4px 0 2px;
+  margin: 0 0 4px;
   font-family: var(--font-brand);
   font-size: 13px;
   color: var(--text-body);

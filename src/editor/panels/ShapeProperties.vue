@@ -12,6 +12,8 @@ import {
 import { isCircleShape, isLineShape, isRectShape } from '../../core/model/shapes'
 import type { MapShape, Vec2 } from '../../core/model/types'
 import { useEditorStore } from '../store/editorStore'
+import PanelSection from './PanelSection.vue'
+import PropertiesHeader from './PropertiesHeader.vue'
 import ShapeFillField from './ShapeFillField.vue'
 import { fromPickerHex, toPickerHex } from './colorPickerValue'
 
@@ -125,140 +127,131 @@ function setRotation(value: number | null): void {
 </script>
 
 <template>
-  <div class="shape-props">
-    <h3 class="panel-title">{{ title }}</h3>
-    <p class="meta">{{ shape.id }}</p>
-    <div v-if="positioned" class="field-row">
+  <div>
+    <PropertiesHeader :id="shape.id" kind="Shape" :title="title" />
+    <PanelSection title="Position" open>
+      <div v-if="positioned" class="field-row">
+        <label class="field">
+          <span class="field-label">X</span>
+          <InputNumber
+            :model-value="positioned.pos[0]"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            @update:model-value="setPos(0, $event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Y</span>
+          <InputNumber
+            :model-value="positioned.pos[1]"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            @update:model-value="setPos(1, $event)"
+          />
+        </label>
+        <label v-if="circle" class="field">
+          <span class="field-label">Radius</span>
+          <InputNumber
+            :model-value="circle.radius"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            :min="0.5"
+            @update:model-value="setRadius($event)"
+          />
+        </label>
+      </div>
+      <div v-if="rect" class="field-row">
+        <label class="field">
+          <span class="field-label">Width</span>
+          <InputNumber
+            :model-value="rect.size[0]"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            :min="0.5"
+            @update:model-value="setSize(0, $event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Height</span>
+          <InputNumber
+            :model-value="rect.size[1]"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            :min="0.5"
+            @update:model-value="setSize(1, $event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Rotation</span>
+          <Select
+            :model-value="rect.rotation ?? 0"
+            :options="rotationOptions"
+            option-label="label"
+            option-value="value"
+            size="small"
+            fluid
+            @update:model-value="setRotation($event)"
+          />
+        </label>
+      </div>
       <label class="field">
-        <span class="field-label">X</span>
-        <InputNumber
-          :model-value="positioned.pos[0]"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          @update:model-value="setPos(0, $event)"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Y</span>
-        <InputNumber
-          :model-value="positioned.pos[1]"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          @update:model-value="setPos(1, $event)"
-        />
-      </label>
-      <label v-if="circle" class="field">
-        <span class="field-label">Radius</span>
-        <InputNumber
-          :model-value="circle.radius"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          :min="0.5"
-          @update:model-value="setRadius($event)"
-        />
-      </label>
-    </div>
-    <div v-if="rect" class="field-row">
-      <label class="field">
-        <span class="field-label">Width</span>
-        <InputNumber
-          :model-value="rect.size[0]"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          :min="0.5"
-          @update:model-value="setSize(0, $event)"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Height</span>
-        <InputNumber
-          :model-value="rect.size[1]"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          :min="0.5"
-          @update:model-value="setSize(1, $event)"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Rotation</span>
+        <span class="field-label">Floor</span>
         <Select
-          :model-value="rect.rotation ?? 0"
-          :options="rotationOptions"
+          :model-value="shape.floor"
+          :options="store.floorOptions"
           option-label="label"
           option-value="value"
           size="small"
-          fluid
-          @update:model-value="setRotation($event)"
+          @update:model-value="setFloor($event)"
         />
       </label>
-    </div>
-    <div class="field-row">
-      <label class="field color-field">
-        <span class="field-label">Color</span>
-        <ColorPicker
-          :model-value="toPickerHex(effectiveColor)"
-          @update:model-value="setColor($event)"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Thickness</span>
-        <InputNumber
-          :model-value="shape.strokeWidth ?? SHAPE_DEFAULT_STROKE_WIDTH"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          :min="0.5"
-          @update:model-value="setThickness($event)"
-        />
-      </label>
-      <label class="toggle-row">
-        <Checkbox
-          :model-value="Boolean(shape.dashed)"
-          binary
-          @update:model-value="setDashed($event as boolean)"
-        />
-        <span>Dashed</span>
-      </label>
-    </div>
-    <ShapeFillField :shape="shape" />
-    <label class="field">
-      <span class="field-label">Floor</span>
-      <Select
-        :model-value="shape.floor"
-        :options="store.floorOptions"
-        option-label="label"
-        option-value="value"
-        size="small"
-        @update:model-value="setFloor($event)"
-      />
-    </label>
+    </PanelSection>
+    <PanelSection title="Style" open>
+      <div class="field-row">
+        <label class="field color-field">
+          <span class="field-label">Color</span>
+          <ColorPicker
+            :model-value="toPickerHex(effectiveColor)"
+            @update:model-value="setColor($event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Thickness</span>
+          <InputNumber
+            :model-value="shape.strokeWidth ?? SHAPE_DEFAULT_STROKE_WIDTH"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            :min="0.5"
+            @update:model-value="setThickness($event)"
+          />
+        </label>
+        <label class="toggle-row">
+          <Checkbox
+            :model-value="Boolean(shape.dashed)"
+            binary
+            @update:model-value="setDashed($event as boolean)"
+          />
+          <span>Dashed</span>
+        </label>
+      </div>
+      <ShapeFillField :shape="shape" />
+    </PanelSection>
   </div>
 </template>
 
 <style scoped>
-.shape-props {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.meta {
-  margin: 0;
-  font-size: 11px;
-  color: var(--text-faint);
-}
-
 .field-row .field {
   flex: 1 1 0;
 }

@@ -2,12 +2,13 @@
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import Toast from 'primevue/toast'
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { ZOOM_BUTTON_FACTOR } from '../core/constants'
 import { isUiOwnedTarget } from '../core/interaction/eventTargets'
 import ControlsLegend from '../core/ui/ControlsLegend.vue'
 import './editor-forms.css'
 import EditorCanvas from './EditorCanvas.vue'
+import EditorHeader from './EditorHeader.vue'
 import EditorStatusBar from './EditorStatusBar.vue'
 import EditorToolbar from './EditorToolbar.vue'
 import ExportDialog from './panels/ExportDialog.vue'
@@ -18,9 +19,8 @@ import PalettePanel from './panels/PalettePanel.vue'
 import PropertiesPanel from './panels/PropertiesPanel.vue'
 import ShortcutHelpDialog from './panels/ShortcutHelpDialog.vue'
 import StartDialog from './panels/StartDialog.vue'
-import ToolbarSeparator from './ToolbarSeparator.vue'
 import ZoomControls from './ZoomControls.vue'
-import { NEEDS_DOCUMENT_HINT, useEditorStore } from './store/editorStore'
+import { useEditorStore } from './store/editorStore'
 import { useLibraryStore } from './store/libraryStore'
 import { useValidationIssues } from './store/useValidationIssues'
 import { useZonesStore } from './store/zonesStore'
@@ -35,11 +35,6 @@ const showExportDialog = ref(false)
 const showMapSettings = ref(false)
 const showLibraryDialog = ref(false)
 const showShortcutHelp = ref(false)
-
-const needsDocumentHint = computed(() => ({
-  value: NEEDS_DOCUMENT_HINT,
-  disabled: Boolean(editor.document),
-}))
 
 const validationIssues = useValidationIssues()
 
@@ -84,58 +79,15 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="editor">
-    <EditorToolbar>
-      <template #io>
-        <ToolbarSeparator />
-        <span v-tooltip.bottom="needsDocumentHint">
-          <Button
-            label="Open…"
-            size="small"
-            severity="secondary"
-            :disabled="!editor.document"
-            @click="requestOpenOther"
-          />
-        </span>
-        <span v-tooltip.bottom="needsDocumentHint">
-          <Button
-            label="Map settings"
-            size="small"
-            severity="secondary"
-            :disabled="!editor.document"
-            @click="showMapSettings = true"
-          />
-        </span>
-        <span v-tooltip.bottom="needsDocumentHint">
-          <Button
-            label="Library"
-            size="small"
-            severity="secondary"
-            :disabled="!editor.document"
-            @click="showLibraryDialog = true"
-          />
-        </span>
-        <ToolbarSeparator />
-        <Button label="Import" size="small" severity="secondary" @click="showImportDialog = true" />
-        <span v-tooltip.bottom="needsDocumentHint">
-          <Button
-            label="Export"
-            size="small"
-            :disabled="!editor.document"
-            @click="showExportDialog = true"
-          />
-        </span>
-        <ToolbarSeparator />
-        <Button
-          v-tooltip.bottom="'Keyboard shortcuts (?)'"
-          icon="pi pi-question-circle"
-          aria-label="Keyboard shortcuts"
-          size="small"
-          text
-          severity="secondary"
-          @click="showShortcutHelp = true"
-        />
-      </template>
-    </EditorToolbar>
+    <EditorHeader
+      @open="requestOpenOther"
+      @import="showImportDialog = true"
+      @settings="showMapSettings = true"
+      @library="showLibraryDialog = true"
+      @export="showExportDialog = true"
+      @help="showShortcutHelp = true"
+    />
+    <EditorToolbar v-if="editor.document" />
     <p v-if="libraryStore.loadError" class="error" role="alert">{{ libraryStore.loadError }}</p>
     <p v-if="zonesStore.loadError" class="error" role="alert">{{ zonesStore.loadError }}</p>
     <div class="editor-main">
@@ -163,7 +115,7 @@ onBeforeUnmount(() => {
         />
       </div>
       <aside class="side-panel properties">
-        <PropertiesPanel />
+        <PropertiesPanel @help="showShortcutHelp = true" />
       </aside>
     </div>
     <EditorStatusBar
@@ -206,11 +158,12 @@ onBeforeUnmount(() => {
 }
 
 .side-panel {
-  width: 240px;
+  width: 248px;
   flex-shrink: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   background: var(--surface-drawer);
-  padding: 8px;
+  padding: 12px;
 }
 
 .palette {
@@ -218,7 +171,7 @@ onBeforeUnmount(() => {
 }
 
 .properties {
-  width: 280px;
+  width: 300px;
   border-left: 1px solid var(--border-default);
 }
 

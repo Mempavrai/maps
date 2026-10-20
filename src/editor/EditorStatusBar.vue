@@ -42,7 +42,6 @@ const issueCount = computed(() => props.issues?.length ?? 0)
     <span class="cell data">Cursor: {{ cursorText }}</span>
     <span class="cell data">Zoom: {{ zoomText }}</span>
     <span class="cell data">Grid: {{ gridText }}</span>
-    <span v-if="store.toolHint" class="cell hint">{{ store.toolHint }}</span>
     <span class="cell push-right" :class="{ error: store.autosaveError }">{{ saveText }}</span>
     <span v-if="props.issues !== null && issueCount === 0" class="cell valid">✓ Valid</span>
     <button

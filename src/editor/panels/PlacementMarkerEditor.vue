@@ -172,7 +172,7 @@ function setDashed(dashed: boolean): void {
         binary
         @update:model-value="toggle($event as boolean)"
       />
-      <span>Marker</span>
+      <span>Show a numbered or icon badge</span>
     </label>
     <template v-if="marker">
       <SelectButton

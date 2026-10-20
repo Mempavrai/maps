@@ -3,6 +3,8 @@ import InputText from 'primevue/inputtext'
 import Select from 'primevue/select'
 import type { RouteLine } from '../../core/model/types'
 import { useEditorStore } from '../store/editorStore'
+import PanelSection from './PanelSection.vue'
+import PropertiesHeader from './PropertiesHeader.vue'
 
 const props = defineProps<{ route: RouteLine }>()
 const store = useEditorStore()
@@ -25,41 +27,28 @@ function setFloor(floor: number): void {
 </script>
 
 <template>
-  <div class="route-props">
-    <h3 class="panel-title">Route</h3>
-    <p class="meta">{{ route.id }}</p>
-    <label class="field">
-      <span class="field-label">Name</span>
-      <InputText
-        :model-value="route.name"
-        size="small"
-        @change="setName(($event.target as HTMLInputElement).value)"
-      />
-    </label>
-    <label class="field">
-      <span class="field-label">Floor</span>
-      <Select
-        :model-value="route.floor"
-        :options="store.floorOptions"
-        option-label="label"
-        option-value="value"
-        size="small"
-        @update:model-value="setFloor($event)"
-      />
-    </label>
+  <div>
+    <PropertiesHeader :id="route.id" kind="Route" :title="route.name" />
+    <PanelSection title="General" open>
+      <label class="field">
+        <span class="field-label">Name</span>
+        <InputText
+          :model-value="route.name"
+          size="small"
+          @change="setName(($event.target as HTMLInputElement).value)"
+        />
+      </label>
+      <label class="field">
+        <span class="field-label">Floor</span>
+        <Select
+          :model-value="route.floor"
+          :options="store.floorOptions"
+          option-label="label"
+          option-value="value"
+          size="small"
+          @update:model-value="setFloor($event)"
+        />
+      </label>
+    </PanelSection>
   </div>
 </template>
-
-<style scoped>
-.route-props {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.meta {
-  margin: 0;
-  font-size: 11px;
-  color: var(--text-faint);
-}
-</style>

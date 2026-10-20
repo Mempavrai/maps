@@ -70,9 +70,8 @@ function removeGap(index: number): void {
 
 <template>
   <div class="wall-gaps">
-    <span class="field-label">Wall gaps</span>
     <p v-if="gaps.length === 0" class="hint">
-      None — pick the room tool's “Wall gap” mode and click an edge.
+      None yet — choose Room → Wall gap in the tool bar and click an edge of this room.
     </p>
     <div v-for="(gap, index) in gaps" :key="index" class="gap-row">
       <label class="field">

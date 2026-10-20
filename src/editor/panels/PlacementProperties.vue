@@ -8,7 +8,9 @@ import { STRUCTURAL_META } from '../../core/render/structuralShapes'
 import type { Placement, TrialDocument } from '../../core/model/types'
 import { useEditorStore } from '../store/editorStore'
 import { useLibraryStore } from '../store/libraryStore'
+import PanelSection from './PanelSection.vue'
 import PlacementMarkerEditor from './PlacementMarkerEditor.vue'
+import PropertiesHeader from './PropertiesHeader.vue'
 import PropsSchemaForm from './PropsSchemaForm.vue'
 
 const props = defineProps<{ placement: Placement }>()
@@ -99,126 +101,122 @@ function setFloor(floor: number): void {
 </script>
 
 <template>
-  <div class="placement-props">
-    <h3 class="panel-title">{{ element?.name ?? placement.element }}</h3>
-    <p class="meta">{{ placement.id }}</p>
-    <div class="field-row">
+  <div>
+    <PropertiesHeader
+      :id="placement.id"
+      kind="Element"
+      :title="element?.name ?? placement.element"
+    />
+    <PanelSection title="Position" open>
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">X</span>
+          <InputNumber
+            :model-value="placement.pos[0]"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            @update:model-value="setPos(0, $event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Y</span>
+          <InputNumber
+            :model-value="placement.pos[1]"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            @update:model-value="setPos(1, $event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Rotation</span>
+          <Select
+            :model-value="placement.rotation ?? 0"
+            :options="rotationOptions"
+            option-label="label"
+            option-value="value"
+            size="small"
+            fluid
+            @update:model-value="setOptional('rotation', $event)"
+          />
+        </label>
+      </div>
+      <div v-if="structural" class="field-row">
+        <label class="field">
+          <span class="field-label">Length</span>
+          <InputNumber
+            :model-value="placement.size?.[0] ?? structural.length"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            :min="0.5"
+            @update:model-value="setSize(0, $event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Width</span>
+          <InputNumber
+            :model-value="placement.size?.[1] ?? structural.thickness"
+            size="small"
+            fluid
+            :use-grouping="false"
+            :max-fraction-digits="1"
+            :min="0.5"
+            @update:model-value="setSize(1, $event)"
+          />
+        </label>
+      </div>
+    </PanelSection>
+    <PanelSection title="Assignment" open>
       <label class="field">
-        <span class="field-label">X</span>
-        <InputNumber
-          :model-value="placement.pos[0]"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          @update:model-value="setPos(0, $event)"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Y</span>
-        <InputNumber
-          :model-value="placement.pos[1]"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          @update:model-value="setPos(1, $event)"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Rotation</span>
+        <span class="field-label">Floor</span>
         <Select
-          :model-value="placement.rotation ?? 0"
-          :options="rotationOptions"
+          :model-value="placement.floor"
+          :options="store.floorOptions"
           option-label="label"
           option-value="value"
           size="small"
-          fluid
-          @update:model-value="setOptional('rotation', $event)"
-        />
-      </label>
-    </div>
-    <div v-if="structural" class="field-row">
-      <label class="field">
-        <span class="field-label">Length</span>
-        <InputNumber
-          :model-value="placement.size?.[0] ?? structural.length"
-          size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          :min="0.5"
-          @update:model-value="setSize(0, $event)"
+          @update:model-value="setFloor($event)"
         />
       </label>
       <label class="field">
-        <span class="field-label">Width</span>
-        <InputNumber
-          :model-value="placement.size?.[1] ?? structural.thickness"
+        <span class="field-label">Room</span>
+        <Select
+          :model-value="placement.roomId ?? null"
+          :options="roomOptions"
+          option-label="label"
+          option-value="value"
           size="small"
-          fluid
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          :min="0.5"
-          @update:model-value="setSize(1, $event)"
+          @update:model-value="setOptional('roomId', $event)"
         />
       </label>
-    </div>
-    <label class="field">
-      <span class="field-label">Floor</span>
-      <Select
-        :model-value="placement.floor"
-        :options="store.floorOptions"
-        option-label="label"
-        option-value="value"
-        size="small"
-        @update:model-value="setFloor($event)"
-      />
-    </label>
-    <label class="field">
-      <span class="field-label">Room</span>
-      <Select
-        :model-value="placement.roomId ?? null"
-        :options="roomOptions"
-        option-label="label"
-        option-value="value"
-        size="small"
-        @update:model-value="setOptional('roomId', $event)"
-      />
-    </label>
-    <label class="toggle-row">
-      <Checkbox
-        :model-value="Boolean(placement.inactive)"
-        binary
-        @update:model-value="setOptional('inactive', $event as boolean)"
-      />
-      <span>Inactive area</span>
-    </label>
-    <PlacementMarkerEditor :placement-id="placement.id" />
-    <template v-if="element?.propsSchema">
-      <span class="field-label">Properties</span>
+      <label class="toggle-row">
+        <Checkbox
+          :model-value="Boolean(placement.inactive)"
+          binary
+          @update:model-value="setOptional('inactive', $event as boolean)"
+        />
+        <span>Inactive area</span>
+      </label>
+    </PanelSection>
+    <PanelSection title="Callout marker" :open="Boolean(placement.marker)">
+      <PlacementMarkerEditor :placement-id="placement.id" />
+    </PanelSection>
+    <PanelSection v-if="element?.propsSchema" title="Properties" open>
       <PropsSchemaForm
         :schema="element.propsSchema"
         :model-value="placement.props"
         @update:model-value="setOptional('props', $event)"
       />
-    </template>
+    </PanelSection>
   </div>
 </template>
 
 <style scoped>
-.placement-props {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.meta {
-  margin: 0;
-  font-size: 11px;
-  color: var(--text-faint);
-}
-
 .field-row .field {
   flex: 1 1 0;
 }

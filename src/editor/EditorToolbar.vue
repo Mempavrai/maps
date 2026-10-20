@@ -1,83 +1,65 @@
 <script setup lang="ts">
-import Button from 'primevue/button'
 import Select from 'primevue/select'
+import { computed } from 'vue'
 import { INNER_LINE_STYLE_OPTIONS } from './innerLineStyles'
 import { useEditorStore } from './store/editorStore'
-import type { RoomToolMode, ShapeToolMode, ToolId } from './tools/toolTypes'
+import { ROOM_MODES, SHAPE_MODES, TOOLS } from './toolCatalog'
 
 const store = useEditorStore()
 
-const tools: Array<{ id: ToolId; label: string; icon: string; hotkey: string }> = [
-  { id: 'select', label: 'Select', icon: 'pi pi-arrow-up-left', hotkey: '1' },
-  { id: 'room', label: 'Room', icon: 'pi pi-home', hotkey: '2' },
-  { id: 'placement', label: 'Element', icon: 'pi pi-map-marker', hotkey: '3' },
-  { id: 'route', label: 'Route', icon: 'pi pi-directions', hotkey: '4' },
-  { id: 'shape', label: 'Shape', icon: 'pi pi-pencil', hotkey: '5' },
-]
+const activeTool = computed(() => TOOLS.find((tool) => tool.id === store.activeTool))
 
-const roomModes: Array<{ id: RoomToolMode; label: string; icon: string; hint: string }> = [
-  {
-    id: 'polygon',
-    label: 'Polygon',
-    icon: 'pi pi-share-alt',
-    hint: 'Polygon — click the far end to close',
-  },
-  { id: 'rect', label: 'Rectangle', icon: 'pi pi-stop', hint: 'Rectangle — two clicks' },
-  {
-    id: 'innerline',
-    label: 'Inner lines',
-    icon: 'pi pi-pen-line',
-    hint: 'Inner lines — decorative lines inside a room',
-  },
-  {
-    id: 'wallgap',
-    label: 'Wall gap',
-    icon: 'pi pi-minus-circle',
-    hint: 'Wall gaps — cut openings into the outer wall',
-  },
-]
-
-const shapeModes: Array<{ id: ShapeToolMode; label: string; icon: string; hint: string }> = [
-  { id: 'circle', label: 'Circle', icon: 'pi pi-circle', hint: 'Circle — center, then radius' },
-  { id: 'rect', label: 'Rectangle', icon: 'pi pi-stop', hint: 'Rectangle — two clicks' },
-  { id: 'line', label: 'Line', icon: 'pi pi-minus', hint: 'Line — Enter/double-click ends' },
-]
+const activeModeHint = computed(() => {
+  if (store.activeTool === 'room') {
+    return ROOM_MODES.find((mode) => mode.id === store.roomToolMode)?.hint
+  }
+  if (store.activeTool === 'shape') {
+    return SHAPE_MODES.find((mode) => mode.id === store.shapeToolMode)?.hint
+  }
+  return activeTool.value?.hint
+})
 </script>
 
 <template>
   <div class="toolbar">
-    <div class="group">
-      <Button
-        v-for="tool in tools"
+    <div class="segmented" role="toolbar" aria-label="Tools">
+      <button
+        v-for="tool in TOOLS"
         :key="tool.id"
         v-tooltip.bottom="`${tool.label} (${tool.hotkey})`"
-        :icon="tool.icon"
-        :aria-label="tool.label"
-        size="small"
-        :severity="store.activeTool === tool.id ? 'primary' : 'secondary'"
+        type="button"
+        class="segment"
+        :aria-pressed="store.activeTool === tool.id"
         @click="store.activeTool = tool.id"
-      />
+      >
+        <i :class="tool.icon" aria-hidden="true" />
+        <span>{{ tool.label }}</span>
+        <kbd>{{ tool.hotkey }}</kbd>
+      </button>
     </div>
-    <div v-if="store.activeTool === 'room'" class="group">
-      <Button
-        v-for="mode in roomModes"
+
+    <div v-if="store.activeTool === 'room'" class="modes" role="toolbar" aria-label="Room mode">
+      <button
+        v-for="mode in ROOM_MODES"
         :key="mode.id"
-        v-tooltip.bottom="mode.hint"
-        :icon="mode.icon"
-        :aria-label="mode.label"
-        size="small"
-        text
-        :severity="store.roomToolMode === mode.id ? 'primary' : 'secondary'"
+        type="button"
+        class="segment compact"
+        :aria-pressed="store.roomToolMode === mode.id"
         @click="store.roomToolMode = mode.id"
-      />
-      <Button
+      >
+        <i :class="mode.icon" aria-hidden="true" />
+        <span>{{ mode.label }}</span>
+      </button>
+      <button
         v-if="store.roomToolMode === 'polygon'"
-        v-tooltip.bottom="'Orthogonal drawing — off by default, hold Alt to invert temporarily'"
-        label="90°"
-        size="small"
-        :severity="store.roomOrthoSnap ? 'primary' : 'secondary'"
+        v-tooltip.bottom="'Snap to right angles — hold Alt to invert temporarily'"
+        type="button"
+        class="segment compact"
+        :aria-pressed="store.roomOrthoSnap"
         @click="store.roomOrthoSnap = !store.roomOrthoSnap"
-      />
+      >
+        90°
+      </button>
       <Select
         v-if="store.roomToolMode === 'innerline'"
         v-model="store.innerLineStyle"
@@ -88,54 +70,25 @@ const shapeModes: Array<{ id: ShapeToolMode; label: string; icon: string; hint: 
         aria-label="Inner line style"
       />
     </div>
-    <div v-if="store.activeTool === 'shape'" class="group">
-      <Button
-        v-for="mode in shapeModes"
+
+    <div v-if="store.activeTool === 'shape'" class="modes" role="toolbar" aria-label="Shape kind">
+      <button
+        v-for="mode in SHAPE_MODES"
         :key="mode.id"
-        v-tooltip.bottom="mode.hint"
-        :icon="mode.icon"
-        :aria-label="mode.label"
-        size="small"
-        text
-        :severity="store.shapeToolMode === mode.id ? 'primary' : 'secondary'"
+        type="button"
+        class="segment compact"
+        :aria-pressed="store.shapeToolMode === mode.id"
         @click="store.shapeToolMode = mode.id"
-      />
+      >
+        <i :class="mode.icon" aria-hidden="true" />
+        <span>{{ mode.label }}</span>
+      </button>
     </div>
-    <div class="group">
-      <label class="field-label" for="floor-select">Floor</label>
-      <Select
-        v-model="store.activeFloor"
-        input-id="floor-select"
-        :options="store.floorOptions"
-        option-label="label"
-        option-value="value"
-        size="small"
-        class="floor-select"
-      />
-      <span class="field-label">Trial</span>
-      <span class="trial-name">{{ store.trialName }}</span>
-    </div>
-    <div class="group push-right">
-      <Button
-        v-tooltip.bottom="'Undo (Ctrl+Z)'"
-        icon="pi pi-arrow-u-turn-up-left"
-        aria-label="Undo"
-        size="small"
-        severity="secondary"
-        :disabled="!store.canUndo"
-        @click="store.undo()"
-      />
-      <Button
-        v-tooltip.bottom="'Redo (Ctrl+Y)'"
-        icon="pi pi-arrow-u-turn-up-right"
-        aria-label="Redo"
-        size="small"
-        severity="secondary"
-        :disabled="!store.canRedo"
-        @click="store.redo()"
-      />
-      <slot name="io" />
-    </div>
+
+    <p class="hint" aria-live="polite" :title="store.toolHint || activeModeHint">
+      <span v-if="store.toolHint" class="live-hint">{{ store.toolHint }}</span>
+      <span v-else>{{ activeModeHint }}</span>
+    </p>
   </div>
 </template>
 
@@ -143,28 +96,90 @@ const shapeModes: Array<{ id: ShapeToolMode; label: string; icon: string; hint: 
 .toolbar {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  min-height: 44px;
   padding: 6px 12px;
   border-bottom: 1px solid var(--border-default);
-  background: var(--surface-panel);
+  background: var(--surface-drawer);
 }
 
-.group {
+.segmented,
+.modes {
   display: flex;
   align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+}
+
+.modes {
+  border-style: dashed;
+}
+
+.segment {
+  display: inline-flex;
+  align-items: center;
   gap: 6px;
-}
-
-.push-right {
-  margin-left: auto;
-}
-
-.floor-select {
-  min-width: 140px;
-}
-
-.trial-name {
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-muted);
+  font: inherit;
   font-size: 13px;
-  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.segment.compact {
+  height: 26px;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.segment:hover {
+  background: var(--surface-hover);
+  color: var(--text-strong);
+}
+
+.segment[aria-pressed='true'] {
+  border-color: var(--border-selected);
+  background: var(--surface-selected);
+  box-shadow: inset 0 -2px 0 var(--accent);
+  color: var(--text-primary);
+}
+
+.segment .pi {
+  font-size: 12px;
+}
+
+kbd {
+  min-width: 16px;
+  padding: 0 4px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  font-family: var(--font-data);
+  font-size: 10px;
+  line-height: 15px;
+  color: var(--text-faint);
+}
+
+.hint {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-hint {
+  color: var(--text-strong);
 }
 </style>

@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import Checkbox from 'primevue/checkbox'
-import InputNumber from 'primevue/inputnumber'
 import InputText from 'primevue/inputtext'
 import Select from 'primevue/select'
 import Textarea from 'primevue/textarea'
 import { computed } from 'vue'
 import { KEBAB_ID_PATTERN } from '../../core/constants'
-import { pointsBounds, shapeToPoints } from '../../core/model/roomPath'
-import type { Room, RoomFlag, RoomInfo, TrialDocument, Vec2 } from '../../core/model/types'
+import type { Room, RoomFlag, RoomInfo, TrialDocument } from '../../core/model/types'
 import { useEditorStore } from '../store/editorStore'
 import { useZonesStore } from '../store/zonesStore'
+import PanelSection from './PanelSection.vue'
+import PropertiesHeader from './PropertiesHeader.vue'
 import RoomImagesEditor from './RoomImagesEditor.vue'
 import RoomInnerLinesEditor from './RoomInnerLinesEditor.vue'
+import RoomLabelEditor from './RoomLabelEditor.vue'
 import RoomWallGapsEditor from './RoomWallGapsEditor.vue'
 
 const props = defineProps<{ room: Room }>()
@@ -32,8 +33,8 @@ const zoneOptions = computed(() =>
 const flags = computed(() => new Set(props.room.flags ?? []))
 
 /** All changes go through the document object from the store (never through the prop). */
-function mutateRoom(mutate: (room: Room, doc: TrialDocument) => void, coalesce?: string): void {
-  store.commitOn('room', props.room.id, mutate, coalesce ? { coalesce } : undefined)
+function mutateRoom(mutate: (room: Room, doc: TrialDocument) => void): void {
+  store.commitOn('room', props.room.id, mutate)
 }
 
 function renameId(raw: string): void {
@@ -114,100 +115,68 @@ function toggleFlag(flag: RoomFlag, checked: boolean): void {
     }
   })
 }
-
-function setLabelText(raw: string): void {
-  const text = raw.trim()
-  mutateRoom((room) => {
-    if (!text) {
-      delete room.label
-      return
-    }
-    if (room.label) {
-      room.label.text = text
-      return
-    }
-    const points = shapeToPoints(room.shape)
-    let pos: Vec2 = [0, 0]
-    if (points) {
-      const { min, max } = pointsBounds(points)
-      pos = [(min[0] + max[0]) / 2, (min[1] + max[1]) / 2]
-    }
-    room.label = { text, pos }
-  })
-}
-
-function setLabelValue(patch: { pos?: Vec2; fontSize?: number | null }, coalesce: string): void {
-  mutateRoom((room) => {
-    if (!room.label) {
-      return
-    }
-    if (patch.pos) {
-      room.label.pos = patch.pos
-    }
-    if (patch.fontSize !== undefined) {
-      if (patch.fontSize === null) {
-        delete room.label.fontSize
-      } else {
-        room.label.fontSize = patch.fontSize
-      }
-    }
-  }, coalesce)
-}
 </script>
 
 <template>
-  <div class="room-props">
-    <h3 class="panel-title">Room</h3>
-    <label class="field">
-      <span class="field-label">ID</span>
-      <InputText
-        :model-value="room.id"
-        size="small"
-        @change="renameId(($event.target as HTMLInputElement).value)"
-      />
-    </label>
-    <label class="field">
-      <span class="field-label">Title</span>
-      <InputText
-        :model-value="room.info?.title ?? ''"
-        size="small"
-        @change="setInfo({ title: ($event.target as HTMLInputElement).value.trim() })"
-      />
-    </label>
-    <label class="field">
-      <span class="field-label">Description</span>
-      <Textarea
-        :model-value="room.info?.description ?? ''"
-        auto-resize
-        rows="3"
-        @change="setInfo({ description: ($event.target as HTMLTextAreaElement).value.trim() })"
-      />
-    </label>
-    <label class="field">
-      <span class="field-label">Zone</span>
-      <Select
-        :model-value="room.zone"
-        :options="zoneOptions"
-        option-label="label"
-        option-value="value"
-        size="small"
-        @update:model-value="setZone($event)"
-      />
-    </label>
-    <label class="field">
-      <span class="field-label">Floor (assigned placements move along)</span>
-      <Select
-        :model-value="room.floor"
-        :options="store.floorOptions"
-        option-label="label"
-        option-value="value"
-        size="small"
-        @update:model-value="setFloor($event)"
-      />
-    </label>
-    <fieldset class="flags panel-fieldset">
-      <legend>Flags</legend>
-      <label v-for="option in flagOptions" :key="option.id" class="flag-row">
+  <div>
+    <PropertiesHeader :id="room.id" kind="Room" :title="room.info?.title ?? room.id" />
+    <PanelSection title="General" open>
+      <label class="field">
+        <span class="field-label">ID</span>
+        <InputText
+          :model-value="room.id"
+          size="small"
+          @change="renameId(($event.target as HTMLInputElement).value)"
+        />
+      </label>
+      <label class="field">
+        <span class="field-label">Title</span>
+        <InputText
+          :model-value="room.info?.title ?? ''"
+          size="small"
+          placeholder="Shown when the room is selected"
+          @change="setInfo({ title: ($event.target as HTMLInputElement).value.trim() })"
+        />
+      </label>
+      <label class="field">
+        <span class="field-label">Description</span>
+        <Textarea
+          :model-value="room.info?.description ?? ''"
+          auto-resize
+          rows="3"
+          @change="setInfo({ description: ($event.target as HTMLTextAreaElement).value.trim() })"
+        />
+      </label>
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">Zone</span>
+          <Select
+            :model-value="room.zone"
+            :options="zoneOptions"
+            option-label="label"
+            option-value="value"
+            size="small"
+            fluid
+            @update:model-value="setZone($event)"
+          />
+        </label>
+        <label class="field">
+          <span class="field-label">Floor</span>
+          <Select
+            v-tooltip.bottom="'Elements assigned to the room move along'"
+            :model-value="room.floor"
+            :options="store.floorOptions"
+            option-label="label"
+            option-value="value"
+            size="small"
+            fluid
+            @update:model-value="setFloor($event)"
+          />
+        </label>
+      </div>
+    </PanelSection>
+    <PanelSection title="Flags" :count="flags.size" :open="flags.size > 0">
+      <label v-for="option in flagOptions" :key="option.id" class="toggle-row">
         <Checkbox
           :model-value="flags.has(option.id)"
           binary
@@ -215,68 +184,24 @@ function setLabelValue(patch: { pos?: Vec2; fontSize?: number | null }, coalesce
         />
         <span>{{ option.label }}</span>
       </label>
-    </fieldset>
-    <label class="field">
-      <span class="field-label">Label text (empty = none)</span>
-      <InputText
-        :model-value="room.label?.text ?? ''"
-        size="small"
-        @change="setLabelText(($event.target as HTMLInputElement).value)"
-      />
-    </label>
-    <div v-if="room.label" class="field-row">
-      <label class="field">
-        <span class="field-label">Label X</span>
-        <InputNumber
-          :model-value="room.label.pos[0]"
-          size="small"
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          @update:model-value="setLabelValue({ pos: [$event ?? 0, room.label.pos[1]] }, 'label-x')"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Label Y</span>
-        <InputNumber
-          :model-value="room.label.pos[1]"
-          size="small"
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          @update:model-value="setLabelValue({ pos: [room.label.pos[0], $event ?? 0] }, 'label-y')"
-        />
-      </label>
-      <label class="field">
-        <span class="field-label">Font size</span>
-        <InputNumber
-          :model-value="room.label.fontSize ?? null"
-          size="small"
-          :use-grouping="false"
-          :max-fraction-digits="1"
-          @update:model-value="setLabelValue({ fontSize: $event }, 'label-size')"
-        />
-      </label>
-    </div>
-    <RoomWallGapsEditor :room-id="room.id" />
-    <RoomInnerLinesEditor :room-id="room.id" />
-    <RoomImagesEditor :room-id="room.id" />
+    </PanelSection>
+    <PanelSection title="Label" :open="Boolean(room.label)">
+      <RoomLabelEditor :room="room" />
+    </PanelSection>
+    <PanelSection title="Wall gaps" :count="room.wallGaps?.length">
+      <RoomWallGapsEditor :room-id="room.id" />
+    </PanelSection>
+    <PanelSection title="Inner lines" :count="room.innerLines?.length">
+      <RoomInnerLinesEditor :room-id="room.id" />
+    </PanelSection>
+    <PanelSection title="Screenshots" :count="room.info?.images?.length">
+      <RoomImagesEditor :room-id="room.id" />
+    </PanelSection>
   </div>
 </template>
 
 <style scoped>
-.room-props {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.flags {
-  gap: 4px;
-}
-
-.flag-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
+.field-row .field {
+  flex: 1 1 0;
 }
 </style>

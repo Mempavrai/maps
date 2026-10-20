@@ -88,24 +88,51 @@ async function pickMap(mapId: string): Promise<void> {
     <p v-if="loadError" class="error" role="alert">{{ loadError }}</p>
 
     <div v-if="mode === 'menu'" class="menu">
-      <Button
-        v-if="autosave"
-        :label="`Continue autosave (${autosaveLabel})`"
-        @click="continueAutosave"
-      />
-      <Button label="New map" severity="secondary" @click="mode = 'new'" />
-      <Button label="Import trial file" severity="secondary" @click="emit('import')" />
-      <div class="existing">
-        <span class="section-label">Load existing map</span>
+      <p class="lead">
+        Edit an existing map or start a new one. Your work is autosaved in this browser.
+      </p>
+      <section v-if="autosave" class="block">
+        <h3 class="panel-heading">Continue where you left off</h3>
+        <Button
+          :label="autosaveLabel"
+          icon="pi pi-history"
+          class="row-button"
+          @click="continueAutosave"
+        />
+      </section>
+      <section class="block">
+        <h3 class="panel-heading">Edit an existing map</h3>
         <Button
           v-for="entry in loadableMaps"
           :key="entry.id"
           :label="entry.name"
+          icon="pi pi-angle-right"
+          icon-pos="right"
           severity="secondary"
+          class="row-button"
           :loading="loadingMapId === entry.id"
           @click="pickMap(entry.id)"
         />
-      </div>
+      </section>
+      <section class="block">
+        <h3 class="panel-heading">Start something new</h3>
+        <div class="pair">
+          <Button
+            label="New map"
+            icon="pi pi-plus"
+            severity="secondary"
+            outlined
+            @click="mode = 'new'"
+          />
+          <Button
+            label="Import trial file"
+            icon="pi pi-file-import"
+            severity="secondary"
+            outlined
+            @click="emit('import')"
+          />
+        </div>
+      </section>
     </div>
 
     <TrialStep
@@ -115,6 +142,7 @@ async function pickMap(mapId: string): Promise<void> {
     />
 
     <div v-else class="new-form">
+      <h3 class="panel-heading">New map</h3>
       <label class="field">
         <span>Map ID (kebab-case, e.g. "fun-park")</span>
         <InputText v-model.trim="newMapId" placeholder="my-map" />
@@ -137,19 +165,34 @@ async function pickMap(mapId: string): Promise<void> {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-width: 360px;
+  width: 400px;
+  max-width: 100%;
 }
 
-.existing {
+.menu {
+  gap: 20px;
+}
+
+.lead {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.block {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-top: 8px;
 }
 
-.section-label {
-  font-size: 12px;
-  color: var(--text-muted);
+.block .panel-heading {
+  margin-bottom: 2px;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
 }
 
 .field {

@@ -44,9 +44,8 @@ function removeLine(index: number): void {
 
 <template>
   <div class="inner-lines">
-    <span class="field-label">Inner lines</span>
     <p v-if="lines.length === 0" class="hint">
-      None — pick the room tool's “Inner lines” mode and draw inside the room.
+      None yet — choose Room → Inner lines in the tool bar and draw inside this room.
     </p>
     <div v-for="(line, index) in lines" :key="index" class="line-row">
       <span class="line-name">#{{ index + 1 }}</span>

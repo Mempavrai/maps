@@ -35,8 +35,7 @@ function isPicking(index: number): boolean {
 </script>
 
 <template>
-  <fieldset class="images panel-fieldset">
-    <legend>Screenshots</legend>
+  <div class="images">
     <div v-for="(image, index) in images" :key="index" class="image-row">
       <div class="src-row">
         <InputText
@@ -131,11 +130,13 @@ function isPicking(index: number): boolean {
       Image files are added to the repository in the pull request; external links work right away
       and are replaced before merging.
     </p>
-  </fieldset>
+  </div>
 </template>
 
 <style scoped>
 .images {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 

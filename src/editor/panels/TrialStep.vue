@@ -8,6 +8,7 @@ import { loadTrialDocument } from '../../core/model/dataSource'
 import type { MapManifest } from '../../core/model/types'
 import { createTrialDocument, ensureTrialInManifest } from '../store/documentIO'
 import { useEditorStore } from '../store/editorStore'
+import PanelSection from './PanelSection.vue'
 
 const props = defineProps<{ manifest: MapManifest }>()
 const emit = defineEmits<{ back: [] }>()
@@ -67,17 +68,21 @@ async function startNewTrial(): Promise<void> {
 <template>
   <div class="trial-step">
     <p v-if="loadError" class="error" role="alert">{{ loadError }}</p>
-    <span class="section-label">{{ manifest.meta.name }} — choose a trial</span>
+    <h3 class="panel-heading">{{ manifest.meta.name }}: choose a trial</h3>
     <Button
       v-for="trial in manifest.trials"
       :key="trial.id"
-      :label="trial.default ? `${trial.name} (default)` : trial.name"
+      :label="trial.name"
+      :badge="trial.default ? 'default' : undefined"
+      badge-severity="secondary"
+      icon="pi pi-angle-right"
+      icon-pos="right"
       severity="secondary"
+      class="row-button"
       :loading="loadingTrialId === trial.id"
       @click="loadTrial(trial.id)"
     />
-    <div class="new-trial">
-      <span class="section-label">New trial</span>
+    <PanelSection title="Create a new trial" class="new-trial">
       <label class="field">
         <span>Trial ID (kebab-case, e.g. "kill-the-snitch")</span>
         <InputText v-model.trim="newTrialId" placeholder="my-trial" />
@@ -98,14 +103,22 @@ async function startNewTrial(): Promise<void> {
           placeholder="Start empty"
         />
       </label>
-    </div>
-    <div class="actions">
-      <Button label="Back" severity="secondary" text @click="emit('back')" />
+      <div class="actions">
+        <Button
+          label="Create trial"
+          :disabled="!trialIdValid"
+          :loading="creatingTrial"
+          @click="startNewTrial"
+        />
+      </div>
+    </PanelSection>
+    <div class="back">
       <Button
-        label="Create trial"
-        :disabled="!trialIdValid"
-        :loading="creatingTrial"
-        @click="startNewTrial"
+        label="Back"
+        icon="pi pi-angle-left"
+        severity="secondary"
+        text
+        @click="emit('back')"
       />
     </div>
   </div>
@@ -115,20 +128,21 @@ async function startNewTrial(): Promise<void> {
 .trial-step {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-width: 360px;
+  gap: 6px;
+  width: 400px;
+  max-width: 100%;
+}
+
+.trial-step .panel-heading {
+  margin-bottom: 2px;
 }
 
 .new-trial {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
-.section-label {
-  font-size: 12px;
-  color: var(--text-muted);
+.back {
+  margin-top: 4px;
 }
 
 .field {
