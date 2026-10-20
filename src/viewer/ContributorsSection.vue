@@ -1,19 +1,23 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, useTemplateRef } from 'vue'
 import { RouterLink } from 'vue-router'
-import { GITHUB_REPO_URL } from '../core/constants'
+import { GITHUB_REPO_URL, HOME_CONTRIBUTOR_COUNT } from '../core/constants'
 import { loadContributors } from '../core/model/dataSource'
 import type { Contributor, MapRegistryEntry } from '../core/model/types'
+import { pickRandom } from '../core/random'
 import ContributorCard from './ContributorCard.vue'
+import { useFirstRowOnly } from './useFirstRowOnly'
 
 defineProps<{ maps: MapRegistryEntry[] }>()
 
 const contributors = ref<Contributor[]>([])
 const loadError = ref('')
 
+useFirstRowOnly(useTemplateRef('list'), useTemplateRef('section'))
+
 onMounted(async () => {
   try {
-    contributors.value = (await loadContributors()).contributors
+    contributors.value = pickRandom((await loadContributors()).contributors, HOME_CONTRIBUTOR_COUNT)
   } catch (error) {
     loadError.value = `Failed to load the contributors: ${String(error)}`
   }
@@ -21,11 +25,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section class="community">
+  <section ref="section" class="community">
     <div class="block">
       <h2 class="panel-heading">Contributors</h2>
       <p v-if="loadError" class="error" role="alert">{{ loadError }}</p>
-      <ul v-else class="contributor-row">
+      <ul v-else ref="list" class="contributor-row">
         <ContributorCard
           v-for="contributor in contributors"
           :key="contributor.name"
@@ -54,7 +58,8 @@ onMounted(async () => {
 <style scoped>
 .community {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+  grid-template-columns: minmax(0, max-content) minmax(0, 400px);
+  justify-content: start;
   gap: 20px 40px;
   margin-top: 16px;
 }
@@ -70,13 +75,11 @@ onMounted(async () => {
 
 .contributor-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin: 0;
-  padding: 0 0 8px;
-  overflow-x: auto;
+  padding: 0;
   list-style: none;
-  scrollbar-width: thin;
-  scrollbar-color: var(--surface-active) transparent;
 }
 
 .invite {

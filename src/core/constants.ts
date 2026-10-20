@@ -21,6 +21,7 @@ export const PROFILE_WIDGET_SRC = 'https://outlasttrialsstats.com/widget/totstat
 export const PROFILE_WIDGET_SIZE = 52
 /** Icon of the Map Contributor badge on outlasttrialsstats.com. */
 export const MAP_CONTRIBUTOR_BADGE_ICON = 'item_schematics'
+export const HOME_CONTRIBUTOR_COUNT = 5
 
 /** Grid snapping in the editor, in map units (1 unit ≈ 10 cm of game world). */
 export const GRID_SNAP_FINE = 2.5
