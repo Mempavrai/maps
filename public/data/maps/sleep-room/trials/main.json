@@ -11,28 +11,13 @@
   "filters": [],
   "rooms": [
     {
-      "id": "room-0001",
-      "floor": 0,
-      "zone": "standard",
-      "shape": {
-        "origin": [
-          385,
-          5
-        ],
-        "rect": [
-          40,
-          55
-        ]
-      }
-    },
-    {
       "id": "room-0002",
       "floor": 0,
       "zone": "standard",
       "shape": {
         "origin": [
-          145,
-          90
+          200,
+          50
         ],
         "rect": [
           65,
@@ -46,11 +31,11 @@
       "zone": "standard",
       "shape": {
         "origin": [
-          210,
+          220,
           105
         ],
         "rect": [
-          45,
+          30,
           40
         ]
       }
@@ -267,9 +252,221 @@
         ],
         "path": "h55 v25 h-5 v5 h-40 v-5 h-10 z"
       }
+    },
+    {
+      "id": "room-0019",
+      "floor": 0,
+      "zone": "standard",
+      "shape": {
+        "origin": [
+          200,
+          122.5
+        ],
+        "path": "v17.5 h20 v-20 h-20 z"
+      }
     }
   ],
-  "placements": [],
+  "placements": [
+    {
+      "id": "pl-0001",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        215,
+        165
+      ],
+      "rotation": 90,
+      "roomId": "room-0004"
+    },
+    {
+      "id": "pl-0002",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        215,
+        200
+      ],
+      "rotation": 270,
+      "roomId": "room-0005"
+    },
+    {
+      "id": "pl-0003",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        215,
+        235
+      ],
+      "rotation": 270,
+      "roomId": "room-0006"
+    },
+    {
+      "id": "pl-0004",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        420,
+        130
+      ],
+      "rotation": 270,
+      "roomId": "room-0010"
+    },
+    {
+      "id": "pl-0005",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        420,
+        165
+      ],
+      "rotation": 90,
+      "roomId": "room-0011"
+    },
+    {
+      "id": "pl-0006",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        420,
+        205
+      ],
+      "rotation": 90,
+      "roomId": "room-0012"
+    },
+    {
+      "id": "pl-0007",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        420,
+        240
+      ],
+      "rotation": 90,
+      "roomId": "room-0013"
+    },
+    {
+      "id": "pl-0008",
+      "element": "door-locked",
+      "floor": 0,
+      "pos": [
+        318,
+        280
+      ],
+      "roomId": "room-0015"
+    },
+    {
+      "id": "pl-0009",
+      "element": "door",
+      "floor": 0,
+      "pos": [
+        235,
+        145
+      ],
+      "roomId": "room-0007"
+    },
+    {
+      "id": "pl-0011",
+      "element": "shuttle",
+      "floor": 0,
+      "pos": [
+        295,
+        115
+      ],
+      "roomId": "room-0015"
+    },
+    {
+      "id": "pl-0012",
+      "element": "shuttle",
+      "floor": 0,
+      "pos": [
+        330,
+        115
+      ],
+      "roomId": "room-0015"
+    },
+    {
+      "id": "pl-0013",
+      "element": "stairs",
+      "floor": 0,
+      "pos": [
+        275,
+        135
+      ],
+      "rotation": 90
+    },
+    {
+      "id": "pl-0014",
+      "element": "stairs",
+      "floor": 0,
+      "pos": [
+        260,
+        140
+      ],
+      "rotation": 270
+    },
+    {
+      "id": "pl-0015",
+      "element": "double-door",
+      "floor": 0,
+      "pos": [
+        220,
+        130
+      ],
+      "rotation": 90,
+      "roomId": "room-0019"
+    },
+    {
+      "id": "pl-0016",
+      "element": "window-double",
+      "floor": 0,
+      "pos": [
+        235,
+        105
+      ],
+      "roomId": "room-0003"
+    },
+    {
+      "id": "pl-0017",
+      "element": "double-door",
+      "floor": 0,
+      "pos": [
+        235,
+        260
+      ]
+    },
+    {
+      "id": "pl-0018",
+      "element": "double-door",
+      "floor": 0,
+      "pos": [
+        405,
+        115
+      ],
+      "roomId": "room-0016"
+    },
+    {
+      "id": "pl-0019",
+      "element": "shuttle",
+      "floor": 0,
+      "pos": [
+        447,
+        283
+      ],
+      "rotation": 90,
+      "roomId": "room-0017"
+    },
+    {
+      "id": "pl-0020",
+      "element": "window-double",
+      "floor": 0,
+      "pos": [
+        405,
+        285
+      ],
+      "rotation": 225,
+      "roomId": "room-0017"
+    }
+  ],
   "routes": [],
   "shapes": []
 }
